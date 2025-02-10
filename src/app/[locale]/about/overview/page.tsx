@@ -9,10 +9,10 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 type Props = {
     params: {locale: Locale};
   };
-  export async function generateMetadata({
+export async function generateMetadata({
     params,
   }: Props) {
-    const {locale}= await params;
+    const {locale} =  params;
     const t = await getTranslations({locale, namespace: 'LocaleLayout'});
     return {
       title: t('overview'),
@@ -20,7 +20,7 @@ type Props = {
     };
   }
 export default async function Page({params}: Props) {
-  const {locale} = await params;
+  const {locale} = params;
   setRequestLocale(locale);
   const t = await getTranslations('OverviewPage')
     return (
