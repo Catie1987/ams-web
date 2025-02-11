@@ -64,7 +64,7 @@ export default function Customers() {
           }
       
           return controls?.stop;
-        }, [rerender, xTranslation, duration, width]);
+        }, [rerender, xTranslation, duration, width, mustFinish]);
     
   return (
     <div className='w-full mt-20 relative min-h-[300px] overflow-hidden'>
