@@ -5,9 +5,10 @@ import ThirdPra from '@/components/pages/02-Aboutpage/ThirdPra';
 import Title from '@/components/shared/Title';
 import AnimatedTitle from '@/components/features/AnimatedTitle';
 import AnimatedLine from '@/components/features/AnimatedLine';
+import { Locale } from '@/i18n/routing';
 
 type Props = {
-  params: {locale: string};
+  params: Promise<{ locale: Locale }>;
 };
 
 export async function generateMetadata({

@@ -5,7 +5,7 @@ import FirstPra from '@/components/pages/02-Aboutpage/2b-Principle/FirstPra';
 import SecondPra from '@/components/pages/02-Aboutpage/2b-Principle/SecondPra';
 
 type Props = {
-    params: {locale: Locale};
+    params: Promise<{ locale: Locale }>;
   };
   export async function generateMetadata({
     params,

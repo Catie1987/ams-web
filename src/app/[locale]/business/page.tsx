@@ -3,9 +3,10 @@ import PageLayout from '@/components/shared/PageLayout';
 import LandingPage from '@/components/pages/03-Businesspage/LandingPage';
 import Service from '@/components/pages/03-Businesspage/Service';
 import BusinessField from '@/components/pages/03-Businesspage/BusinessField';
+import { Locale } from '@/i18n/routing';
 
 type Props = {
-  params: {locale: string};
+  params: Promise<{ locale: Locale }>;
 };
 
 export async function generateMetadata({
