@@ -105,7 +105,7 @@ export default function Navigation() {
                         {t('search')}
                   </div>
                   <div className='w-full'>
-                      <SearchForm initialSearch={''}/>
+                      <SearchForm placeholder={t('search-input')}/>
                     </div>
                 </div>
               </li>

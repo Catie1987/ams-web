@@ -1,59 +1,51 @@
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { Search, X } from 'lucide-react';
+import {  useState } from "react";
+import { Search, PencilLine, X } from 'lucide-react';
 import { useTranslations } from "next-intl";
+import { Input } from "../ui/input";
 
-export function SearchForm({ initialSearch }: { initialSearch: string }) {
-  const [tagName, setTagName] = useState(initialSearch ?? "");
+export function SearchForm({ placeholder }: { placeholder: string }) {
+  const [searchQuery, setSearchQuery] = useState("");
   const t = useTranslations('Navigation');
-  const router = useRouter();
+  const { push } = useRouter();
 
   const handleClear = () => {
-    setTagName("");
-    router.replace(`/`);
-    router.refresh();
+    setSearchQuery("");
   };
 
-  useEffect(() => {
-    setTagName(initialSearch);
-  }, [initialSearch]);
+  const handleSearch = () => {
+    if (searchQuery) {
+      push(`/product?query=${searchQuery}`);
+    }
+  };
 
   return (
-    <form
-      className="w-full"
-      onSubmit={(e) => {
-        e.preventDefault();
-        router.replace(`/product?search=${encodeURIComponent(tagName)}`);
-        router.refresh();
-      }}
-    >
-      <Label htmlFor="product-name" className="text-right">
-        
-      </Label>
+    <div className="w-full">
+      <label htmlFor="search" className="sr-only">
+        Search
+      </label>
       <div className="flex gap-2 w-full justify-between">
         <div className="relative flex items-center flex-grow">
         <Input
-          placeholder={t('search-input')}
-          className="text-gray-800 border-gray-400"
-          onChange={(e) => setTagName(e.currentTarget.value)}
-          id="product-name"
-          value={tagName}
+          className="peer block w-full rounded-md border border-white py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-400"
+          placeholder={placeholder}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
-        {tagName && (
+        <PencilLine className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
+        {placeholder && (
           <X
             size={20}
-            className="absolute right-2 cursor-pointer text-gray-400"
+            className="absolute right-2 cursor-pointer text-gray-400 hover:text-[--cta2]"
             onClick={handleClear}
           />
         )}
         </div>
-        <Button type="submit"><Search size={20}/></Button>
+        <Button onClick={handleSearch}><Search size={20}/></Button>
         
       </div>
-    </form>
+    </div>
   );
 }

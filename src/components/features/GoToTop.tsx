@@ -60,7 +60,7 @@ export default function ScrollToTopButton({footerRef}: ScrollToTopButtonProps) {
       variants={ScrollToTopContainerVariants}
       initial="hide"
       animate={controls}
-      className={`fixed right-2 md:right-4 lg:right-8 bottom-12 `}>
+      className={`fixed right-2 md:right-4 lg:right-8 bottom-12 z-[100]`}>
       <button onClick={scrollToTop} className="flex items-center gap-2 group">
         <div className={`bg-[--cta2] group-hover:bg-white group-hover:delay-200 duration-100 rounded-full shadow-md h-8 w-8 border flex justify-center items-center relative`}>
           <span className='absolute text-white opacity-100 group-hover:-translate-y-2 group-hover:opacity-0 translate-y-0 group-hover:transition-all group-hover:duration-300'>↑</span>

@@ -12,6 +12,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '../ui/separator';
 import ToggleIcon from '../shared/ToggleIcon';
 import { BusinessList } from '../shared/BusinessList';
+import { SearchForm } from '../shared/search-side';
 
 
 export default function Menu() {
@@ -179,6 +180,7 @@ export default function Menu() {
                   transition={{ duration: 0.3, ease: 'easeInOut' }}
                   className={`flex flex-col ml-4 translate-y-2 gap-2 overflow-hidden text-base text-black/80`}
                   >
+                    
                     <NavItem href="/product/maker"><div className='text-base'>{t('product1')}</div></NavItem>
                     <NavItem href="/product/type"><div className='text-base'>{t('product2')}</div></NavItem>
                     <NavItem href="/product/function"><div className='text-base'>{t('product3')}</div></NavItem>
