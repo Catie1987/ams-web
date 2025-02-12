@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import {
   Command,
   CommandGroup,
+  CommandInput,
   CommandItem,
   CommandList,
   CommandSeparator,
@@ -90,6 +91,7 @@ export function SelectCategory({ locale, selectvalue }: SelectCategoryProps) {
       </PopoverTrigger>
       <PopoverContent className="w-[320px] sm:w-[450px] p-0">
         <Command>
+        <CommandInput placeholder={t('select')} className="h-9" />
           <CommandList>
             <CommandGroup>
               {categories.map((category) => (
