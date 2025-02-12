@@ -12,7 +12,6 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '../ui/separator';
 import ToggleIcon from '../shared/ToggleIcon';
 import { BusinessList } from '../shared/BusinessList';
-import { SearchForm } from '../shared/search-side';
 
 
 export default function Menu() {
