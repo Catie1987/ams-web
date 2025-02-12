@@ -6,7 +6,7 @@ import BreadCrumb from '@/components/layouts/BreadCrumb';
 
 type Props = {
     children: ReactNode;
-    params: {locale: string};
+    params: Promise<{ locale: string }>;
   };
 
   export async function generateMetadata({
