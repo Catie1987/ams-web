@@ -6,7 +6,7 @@ import Banner from '@/components/pages/04-Productpage/Banner';
 
 type Props = {
     children: ReactNode;
-    params: {locale: string};
+    params: Promise<{ locale: string }>;
   };
 
   export async function generateMetadata({

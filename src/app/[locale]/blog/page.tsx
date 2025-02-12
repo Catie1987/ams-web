@@ -9,7 +9,7 @@ import { Locale } from '@/i18n/routing';
 import BlogPostsGridSuspense from '@/components/pages/05-Blogpage/BlogPostGrid';
 
 type Props = {
-  params: {locale: string};
+  params: Promise<{ locale: string }>;
   searchParams?: Promise<{
     query?: string;
     page?: string;

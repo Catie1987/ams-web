@@ -8,7 +8,7 @@ import FourthPra from '@/components/pages/01-Homepage/FourthPra';
 import Customers from '@/components/pages/01-Homepage/Customers';
 
 type Props = {
-  params: {locale: string};
+  params: Promise<{ locale: string }>;
 };
 
 export default async function IndexPage({params}: Props) {

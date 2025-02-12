@@ -6,7 +6,7 @@ import ContactDetail from '@/components/pages/06-Contactpage/ContactDetail';
 import ContactForm from '@/components/pages/06-Contactpage/ContactForm';
 
 type Props = {
-  params: {locale: string};
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata({

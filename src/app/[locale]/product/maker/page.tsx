@@ -4,7 +4,7 @@ import { title } from 'process';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type Props = {
-    params: {locale: string};
+    params: Promise<{ locale: string }>;
   };
 
   export async function generateMetadata({ params }: Props): Promise<Metadata> {

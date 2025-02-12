@@ -3,7 +3,7 @@ import PageLayout from '@/components/shared/PageLayout';
 import Business5 from '@/components/pages/03-Businesspage/Business5/Main';
 
 type Props = {
-  params: {locale: string};
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata({
