@@ -1,5 +1,4 @@
-'use client';
-
+"use client"
 import * as React from 'react';
 import { Check, ChevronsUpDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -48,6 +47,14 @@ interface SelectCategoryProps {
   selectvalue: string;
 }
 
+interface PopoverTriggerProps {
+  children: React.ReactNode;
+}
+
+const CustomPopoverTrigger: React.FC<PopoverTriggerProps> = ({ children }) => {
+  return <PopoverTrigger asChild>{children}</PopoverTrigger>;
+};
+
 export function SelectCategory({ locale, selectvalue }: SelectCategoryProps) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState(selectvalue);
@@ -75,7 +82,7 @@ export function SelectCategory({ locale, selectvalue }: SelectCategoryProps) {
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
+      <CustomPopoverTrigger>
         <Button
           variant="outline"
           role="combobox"
@@ -87,7 +94,7 @@ export function SelectCategory({ locale, selectvalue }: SelectCategoryProps) {
             : t('select')}
           <ChevronsUpDown className="opacity-50" size={16} />
         </Button>
-      </PopoverTrigger>
+      </CustomPopoverTrigger>
       <PopoverContent className="w-[320px] sm:w-[450px] p-0">
         <Command>
           <CommandList>
