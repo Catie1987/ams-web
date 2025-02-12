@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button';
 import { Mail } from 'lucide-react';
 
 type Props = {
-  params: {locale: string};
+  params: Promise<{ locale: string }>;
   searchParams?: Promise<{
     query?: string;
     page?: string;
