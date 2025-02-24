@@ -193,7 +193,7 @@ export default function Case4() {
                 <span className='text-sm mt-[1px]'>{t('ke4897')}</span>
               </div>
               <div className='flex flex-wrap gap-x-2 items-center'>
-                <Link href={'/product/shinetsu-silicone-ke-45'} className='hover:underline underline-offset-2 font-medium'>KE-45</Link>
+                <Link href={'/product'} className='hover:underline underline-offset-2 font-medium'>KE-45</Link>
                 <span className='text-sm mt-[1px]'>{t('ke45')}</span>
               </div>
               <div className='flex flex-wrap gap-x-2 items-center'>
@@ -269,7 +269,7 @@ export default function Case4() {
                 <span className='text-sm mt-[1px]'>{t('ke4897')}</span>
               </div>
               <div className='flex flex-wrap gap-x-2 items-center'>
-                <Link href={'/product/shinetsu-silicone-ke-45'} className='hover:underline underline-offset-2 font-medium'>KE-45</Link>
+                <Link href={'/product'} className='hover:underline underline-offset-2 font-medium'>KE-45</Link>
                 <span className='text-sm mt-[1px]'>{t('ke45')}</span>
               </div>
               <div className='flex flex-wrap gap-x-2 items-center'>
