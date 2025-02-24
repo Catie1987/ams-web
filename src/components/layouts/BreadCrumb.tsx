@@ -11,6 +11,8 @@ import {
 import { usePathname, useParams } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
+
+
 export default function BreadCrumb() {
   const pathname = usePathname();
   const locale = useLocale();
@@ -54,6 +56,12 @@ export default function BreadCrumb() {
     'pin-nang-luong': t('business7'),
     construction: t('business8'),
     'xay-dung': t('business8'),
+    maker: t('maker'),
+    'thuong-hieu': t('maker'),
+    type: t('type'),
+    'the-loai': t('type'),
+    function: t('function'),
+    'chuc-nang' : t('function')
   };
 
 
@@ -78,7 +86,7 @@ export default function BreadCrumb() {
                 <BreadcrumbItem className='capitalize'>
                   {isLastSegment  ? ( 
                     <BreadcrumbPage> 
-                      {breadcrumbMapping[segment] || segment} 
+                      {breadcrumbMapping[segment] || ''} 
                     </BreadcrumbPage> ) : ( 
                     <BreadcrumbLink href={href}> 
                       {breadcrumbMapping[segment] || segment} 

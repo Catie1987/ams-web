@@ -384,6 +384,12 @@ export const getMakers = async (): Promise<MakerDetail[]> => {
     manufactureCollection (order: makerName_ASC) {
       items{
         makerName
+        logo {
+            url
+            width
+            height
+          }
+        slug
       }
     }
   }`;
@@ -396,6 +402,29 @@ export const getMakers = async (): Promise<MakerDetail[]> => {
     });
   return sortedMakers;
 };
+
+export const getMaker = async (
+  slug: string,
+  locale: string = "en-US",
+): Promise<MakerDetail | null> => {
+  const gqlQuery = `{
+    manufactureCollection (locale: "${locale}", where: { slug: "${slug}" }, limit: 1) {
+      items{
+        makerName
+        logo {
+            url
+            width
+            height
+          }
+        slug
+      }
+    }
+  }`;
+  const res = await fetchContentfulData(gqlQuery);
+  const makerName: MakerDetail | null =
+    res?.data?.manufactureCollection?.items[0] || null;
+  return makerName;
+}
 
 
 export const getProductTypes = async (
@@ -413,6 +442,67 @@ export const getProductTypes = async (
   const res = await fetchContentfulData(gqlQuery);
   const ProductTypes: TypeDetail[] = res.data.byTypeCollection.items || [];
   return ProductTypes;
+};
+
+export const getProductType = async (
+  slug: string,
+  locale: string = "en-US",
+): Promise<TypeDetail | null> => {
+  const gqlQuery = `{
+    byTypeCollection (locale: "${locale}", where: { slug: "${slug}" }, limit: 1) {
+      items {
+        slug
+        title
+        subTitle{
+                  json
+                  links{
+                    assets {
+                      block {
+                        sys {
+                          id
+                        }
+                        url
+                        title
+                        width
+                        height
+                        description
+                      }
+                    }
+                  }
+                }
+
+      }
+    }
+  }`;
+  const res = await fetchContentfulData(gqlQuery);
+  const ProductType: TypeDetail | null =
+    res?.data?.byTypeCollection?.items[0] || null;
+  return ProductType;
+}
+
+export const getFilterProductTypes = async (
+  locale: string = "en-US",
+  category: string ="",
+): Promise<TypeDetail[]> => {
+  const categoryFilter = category
+  ? `where: {category_in: "${category}"}`
+  : '';
+  const gqlQuery= `{
+    byTypeCollection (locale: "${locale}", order: title_ASC, ${categoryFilter}) {
+      items {
+        slug
+        title
+        image {
+            url
+            width
+            height
+          }
+      }
+    }
+  }`;
+  const res = await fetchContentfulData(gqlQuery);
+  const ProductTypes: TypeDetail[] = res.data.byTypeCollection?.items || [];
+  return ProductTypes;
 }
 
 export const getFunctions = async (
@@ -422,6 +512,12 @@ export const getFunctions = async (
     byFunctionCollection (locale:"${locale}", order:title_ASC) {
       items {
         title
+        slug
+        image {
+          url
+          width
+          height
+        }
       }
     }
   }`
@@ -429,3 +525,201 @@ export const getFunctions = async (
   const Functions: FunctionDetail[] = res.data.byFunctionCollection.items || [];
   return Functions;
 }
+
+export const getFunction = async (
+  slug: string,
+  locale: string = "en-US",
+): Promise<FunctionDetail | null> => {
+  const gqlQuery = `{
+    byFunctionCollection (locale: "${locale}", where: { slug: "${slug}" }, limit: 1) {
+      items {
+        slug
+        title
+        subTitle{
+                  json
+                  links{
+                    assets {
+                      block {
+                        sys {
+                          id
+                        }
+                        url
+                        title
+                        width
+                        height
+                        description
+                      }
+                    }
+                  }
+                }
+      }
+    }
+  }`;
+  const res = await fetchContentfulData(gqlQuery);
+  const ProductFunction: FunctionDetail | null =
+    res?.data?.byFunctionCollection?.items[0] || null;
+  return ProductFunction;
+}
+
+interface getProductsArgsbyMaker {
+  limit?: number;
+  skip?: number;
+  locale?: string;
+  query?: string;
+  productTypes?: string[];
+  functionTitles?: string[];
+};
+
+export const getProductsbyMaker = async ({
+makerName = ""
+}: {
+  makerName: string
+},{
+  query = ""
+}:getProductsArgsbyMaker = {}) => {
+
+  const makerFilter = makerName
+  ? `maker: {makerName_in: "${makerName}"}`
+  : '';
+ 
+  
+  const gqlQuery = `{
+      productCollection ( where: {${makerFilter},
+      }, order:name_DESC, limit: 6) 
+      {
+          items {
+              id
+              name
+              image {
+                  url
+                  width
+                  height
+              }
+              packing
+              shelflife
+              maker {
+                makerName
+                logo {
+                  url
+                  width
+                  height
+                }
+              }
+              type {
+                title
+                category
+              }
+              functionCollection {
+                items {
+                  title
+                }
+              }
+          }
+      }
+  }`;
+  const res = await fetchContentfulData(gqlQuery);
+  const Products: ProductDetail[] = res.data.productCollection.items || [];
+  return Products;
+}
+
+export const getProductsbyType = async ({
+  typeName = "",
+  locale = "",
+  }: {
+    typeName: string,
+    locale: string
+  }) => {
+  
+    const typeFilter = typeName
+    ? `where: {type: {slug_in: "${typeName}"}}`
+    : '';
+   
+    
+    const gqlQuery = `{
+        productCollection (order:name_DESC, limit:6, locale: "${locale}", ${typeFilter}) 
+        {
+            items {
+                id
+                name
+                image {
+                    url
+                    width
+                    height
+                }
+                packing
+                shelflife
+                maker {
+                  makerName
+                  logo {
+                    url
+                    width
+                    height
+                  }
+                }
+                type {
+                  title
+                  category
+                }
+                functionCollection {
+                  items {
+                    title
+                  }
+                }
+            }
+        }
+    }`;
+    const res = await fetchContentfulData(gqlQuery);
+    const Products: ProductDetail[] = res.data.productCollection.items || [];
+    return Products;
+  }
+
+  export const getProductsbyFunction = async ({
+    functionName = "",
+    locale = "",
+    }: {
+      functionName: string,
+      locale: string
+    }) => {
+    
+      const functionFilter = functionName
+      ? `where: {function: {slug_in: "${functionName}"}}`
+      : '';
+     
+      
+      const gqlQuery = `{
+          productCollection (order:name_DESC, limit:6, locale: "${locale}", ${functionFilter}) 
+          {
+              items {
+                  id
+                  name
+                  image {
+                      url
+                      width
+                      height
+                  }
+                  packing
+                  shelflife
+                  maker {
+                    makerName
+                    logo {
+                      url
+                      width
+                      height
+                    }
+                  }
+                  type {
+                    title
+                    category
+                  }
+                  functionCollection {
+                    items {
+                      title
+                    }
+                  }
+              }
+          }
+      }`;
+      const res = await fetchContentfulData(gqlQuery);
+      const Products: ProductDetail[] = res.data.productCollection.items || [];
+      return Products;
+    }

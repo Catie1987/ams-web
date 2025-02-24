@@ -75,13 +75,25 @@ export const routing = defineRouting({
       en: '/product/maker',
       vn: '/san-pham/thuong-hieu'
     },
+    '/product/maker/[slug]': {
+      en: '/product/maker/[slug]',
+      vn: '/san-pham/thuong-hieu/[slug]'
+    },
     '/product/type': {
       en: '/product/type',
       vn: '/san-pham/the-loai'
     },
+    '/product/type/[slug]': {
+      en: '/product/type/[slug]',
+      vn: '/san-pham/the-loai/[slug]'
+    },
     '/product/function': {
       en: '/product/function',
       vn: '/san-pham/chuc-nang'
+    },
+    '/product/function/[slug]': {
+      en: '/product/function/[slug]',
+      vn: '/san-pham/chuc-nang/[slug]'
     },
     '/blog': {
       en: '/blog',
@@ -118,10 +130,6 @@ export const routing = defineRouting({
     '/terms-of-use': {
       en: '/terms-of-use',
       vn: '/dieu-khoan-su-dung'
-    },
-    '/product/shinetsu-silicone-ke-45': {
-      en: '/product/shinetsu-silicone-ke-45',
-      vn: '/san-pham/shinetsu-silicone-ke-45'
     },
   }
 });

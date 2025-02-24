@@ -38,7 +38,8 @@ export async function generateStaticParams(props: {
     params: Params
   }) {
     const params = await props.params;
-    const blogPost = await getBlogpost(params.slug);
+    const contentfulLocale = localeMap[params.locale as unknown as string] || 'en-US';
+    const blogPost = await getBlogpost(params.slug, contentfulLocale);
     if(!blogPost) {
       
       return;

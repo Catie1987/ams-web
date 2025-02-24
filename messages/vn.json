@@ -171,6 +171,7 @@
   "BlogPage": {
     "readmore": "Tìm hiểu thêm",
     "goback": "Quay lại",
+    "backlink": "/vn/bai-viet",
     "related": "Bài Viết Liên Quan",
     "notfound": "Không tìm thấy bài viết nào, hãy thử tìm kiếm lại từ khóa hoặc lựa chọn hạng mục khác",
     "select": "Chọn danh mục...",
@@ -205,7 +206,8 @@
     "bytype": "theo Phân Loại",
     "byfunction": "theo Ứng Dụng",
     "show": "Hiện kết quả",
-    "oftotal": " trong tổng"
+    "oftotal": " trong tổng",
+    "productlink": "/vn/san-pham"
   },
   "LocaleLayout": {
     "title": "AMS VIETNAM",
@@ -231,13 +233,25 @@
     "business7" : "Pin & Năng Lượng",
     "business8" : "Xây Dựng",
     "product" : "SẢN PHẨM | AMS VIETNAM",
-    "product-des" : "a",
+    "product-des" : "Chúng tôi có thể cung cấp chính xác các sản phẩm, thông tin và dịch vụ mà khách hàng mong muốn. Đây là lý do tại sao AMS được khách hàng lựa chọn.",
     "maker": "NHÀ SẢN XUẤT",
+    "type": "CÁC LOẠI SẢN PHẨM",
+    "function": "ỨNG DỤNG CHỨC NĂNG",
     "blog" : "BÀI VIẾT | AMS VIETNAM",
-    "blog-des": "a"
+    "blog-des": "Chúng tôi có thể cung cấp chính xác các sản phẩm, thông tin và dịch vụ mà khách hàng mong muốn. Đây là lý do tại sao AMS được khách hàng lựa chọn."
   },
   "ValuePage": {
-    "intro": "Giá trị Cốt Lõi"
+    "intro": "Giá trị Cốt Lõi",
+    "title1": "Lãnh đạo",
+    "des1": "Chúng tôi lãnh đạo bằng tấm gương, nâng tầm nhìn của mọi người lên một tầm cao hơn, nâng cao hiệu suất của họ lên một tiêu chuẩn cao hơn, xây dựng tính cách của họ vượt ra ngoài những giới hạn thông thường, để những người khác có động lực noi theo hướng đạt được tầm nhìn chung. Chúng tôi thúc đẩy một môi trường trong tổ chức khuyến khích chấp nhận rủi ro, công nhận, khen thưởng và trao quyền cho phép các kỹ năng lãnh đạo xuất hiện.",
+    "title2": "Đạo đức",
+    "des2": "Chúng tôi sẵn sàng tuân thủ các tiêu chuẩn đạo đức cao nhất để phục vụ lợi ích tốt nhất của khách hàng và xã hội. Chúng tôi hành xử theo cách khiến mọi người, khách hàng và xã hội tin tưởng vào doanh nghiệp của chúng tôi bằng cách công bằng, trung thực và trung thành. Chúng tôi thể hiện sự minh bạch bằng cách chia sẻ kiến ​​thức để tạo ra một nền văn hóa nơi mọi người có thể đóng góp một cách tự do.",
+    "title3": "Trao quyền",
+    "des3": "Bằng cách phân quyền, chúng tôi tạo ra một môi trường mà mọi người đưa ra quyết định có trách nhiệm và giải trình để đạt được Sứ mệnh và Tầm nhìn của chúng tôi.",
+    "title4": "Chuyên nghiệp",
+    "des4": "Chúng tôi tuân theo những các hoạt động kinh doanh để chúng tôi được công nhận về chuyên môn của mình nhằm phục vụ lợi ích tốt nhất của khách hàng và xã hội. Chúng tôi thúc đẩy sự tôn trọng và tin tưởng, đơn giản hóa các giao dịch và làm cho chất lượng cuộc sống thú vị và thỏa mãn hơn với kế hoạch, làm việc nhóm và kiến ​​thức.",
+    "title5": "Mở cửa để thay đổi",
+    "des5": "Chúng tôi cung cấp khuôn khổ để mọi người của chúng tôi có thể đổi mới và chủ động và tạo ra những cơ hội mới. Chúng tôi cải thiện hiệu suất của mình bằng cách tạo ra một nền văn hóa tham gia tích cực của tất cả mọi người để tăng thêm giá trị cho cách chúng tôi làm việc."
   },
   "BusinessPage": {
     "intro": "Từ các bộ phận đến thành phẩm, chúng tôi cung cấp các giải pháp tối ưu",
@@ -553,7 +567,64 @@
     "search": "Tìm kiếm sản phẩm",
     "search-input": "tên sản phẩm...",
     "blog": "Bài viết",
-    "contact": "Liên hệ"
+    "contact": "Liên hệ",
+    "maker": "Thương hiệu",
+    "type": "Phân Loại",
+    "function": "Ứng Dụng Chức Năng"
+  },
+
+  "MakerPage": {
+    "intro": "Nhà sản xuất",
+    "content": "AMS là nhà phân phối duy nhất cung cấp hơn 40 nhà sản xuất hàng đầu trong ngành về keo dán hiệu suất cao, chất trám trét, lớp phủ bảo vệ, chất đóng gói, thiết bị phân phối, hóa chất đặc biệt và thiết bị xử lý UV từ một nguồn. Chúng tôi cung cấp các sản phẩm phổ biến nhất của mình trực tuyến. Nếu bạn không tìm thấy những gì bạn đang tìm kiếm, hãy yêu cầu báo giá và chúng tôi sẽ kiểm tra kho hàng ngoại tuyến rộng lớn của mình. Nếu bạn cần trợ giúp để lựa chọn sản phẩm",
+    "button": "Liên hệ chúng tôi",
+    "link": "/vn/lien-he",
+    "goback": "Quay lại",
+    "backlink": "/vn/san-pham/thuong-hieu/",
+    "sub1": "Là một đại lý của",
+    "sub2": " , AMS đã cam kết hiểu biết nhiều hơn là chỉ lĩnh vực sản xuất. Chúng tôi hiểu tầm quan trọng của việc phục vụ khách hàng thiết kế và lắp ráp công nghiệp với quyền truy cập trực tiếp từ" ,
+    "sub3": ", và hỗ trợ kỹ thuật cho các ứng dụng của bạn.",
+    "feature": "Sản Phẩm Nổi Bật",
+    "featurecontent1": "Bên cạnh chỉ là những sản phẩm nổi bật của nhà sản xuất",
+    "featurecontent2": ".Ngoài ra chúng tôi còn có thể cung cấp tổng cộng",
+    "featurecontent3": "sản phẩm tùy theo nhu cầu của quý khách hàng.",
+    "featurecontent4": "Chung tôi rất mong muốn được hỗ trợ và tư vấn thêm",
+    "button1": "Trang sản phẩm",
+    "link1": "/vn/san-pham?maker=%2C",
+    "notfound": "Không tìm thấy sản phẩm nào, vui lòng thử tìm kiếm lại bằng từ khóa khác hoặc chọn nhà sản xuất khác"
+  },
+
+  "TypePage" : {
+    "intro": "Phân Loại Sản Phẩm",
+    "content": "Tại AMS, chúng tôi tự hào cung cấp nhiều loại sản phẩm được thiết kế riêng cho ngành công nghiệp điện tử. Với sự hiểu biết sâu sắc về những nhu cầu và thách thức độc đáo trong thị trường này, chúng tôi được trang bị đầy đủ để hỗ trợ khách hàng đáp ứng các yêu cầu của họ. Đội ngũ tận tụy của chúng tôi làm việc chặt chẽ với khách hàng để đảm bảo rằng mọi sản phẩm đều được thiết kế và sản xuất theo tiêu chuẩn cao nhất, cung cấp các giải pháp sáng tạo giúp nâng cao hiệu suất và độ tin cậy. Cho dù bạn đang tìm kiếm các thành phần tiên tiến hay các giải pháp được thiết kế riêng, cam kết của chúng tôi về sự xuất sắc và sự hài lòng của khách hàng giúp chúng tôi trở thành đối tác đáng tin cậy trong ngành công nghiệp điện tử.",
+    "button": "Liên hệ chúng tôi",
+    "link": "/vn/lien-he",
+    "goback": "Quay lại",
+    "backlink": "/vn/san-pham/the-loai/",
+    "feature": "Sản Phẩm Tiêu Biểu",
+    "featurecontent1": "Bên cạnh chỉ là những sản phẩm nổi bật loại sản phẩm",
+    "featurecontent2": ".Ngoài ra chúng tôi còn có thể cung cấp tổng cộng",
+    "featurecontent3": "sản phẩm liên quan đến danh mục này tùy theo nhu cầu của quý khách hàng.",
+    "featurecontent4": "Chung tôi rất mong muốn được hỗ trợ và tư vấn thêm",
+    "button1": "Xem thêm sản phẩm liên quan đến ",
+    "link1": "/vn/san-pham?query=%2C",
+    "notfound": "Không tìm thấy sản phẩm nào, vui lòng thử tìm kiếm lại bằng từ khóa khác hoặc chọn loại sản phẩm khác"
+  },
+
+  "FunctionPage": {
+    "intro": "Ứng Dụng Chức Năng",
+    "content": "AMS chuyên cung cấp nhiều loại sản phẩm chức năng được thiết kế cho nhiều ứng dụng khác nhau. Từ các tiện ích tiên tiến và thiết bị sáng tạo đến các thành phần và phụ kiện thiết yếu, các sản phẩm của chúng tôi đáp ứng nhu cầu không ngừng thay đổi của ngành công nghiệp điện tử. Cho dù bạn đang tìm kiếm các giải pháp hiệu suất cao cho các ứng dụng công nghiệp, các thành phần đáng tin cậy cho thiết bị điện tử tiêu dùng hay các công cụ tiên tiến để sử dụng chuyên nghiệp, các sản phẩm của chúng tôi đều mang lại chất lượng và hiệu suất vượt trội. Với cam kết liên tục đổi mới và sự hài lòng của khách hàng, chúng tôi đảm bảo rằng các sản phẩm của mình đáp ứng các tiêu chuẩn cao nhất và cung cấp các giải pháp thiết thực cho nhiều ứng dụng điện tử.",
+    "button": "Liên hệ chúng tôi",
+    "link": "/vn/lien-he",
+    "goback": "Quay lại",
+    "backlink": "/vn/san-pham/the-loai/",
+    "feature": "Sản Phẩm Tiêu Biểu",
+    "featurecontent1": "Bên cạnh chỉ là những sản phẩm nổi bật loại sản phẩm dùng để",
+    "featurecontent2": ". Ngoài ra chúng tôi còn có thể cung cấp tổng cộng",
+    "featurecontent3": "sản phẩm liên quan đến danh mục này tùy theo nhu cầu của quý khách hàng.",
+    "featurecontent4": "Chung tôi rất mong muốn được hỗ trợ và tư vấn thêm",
+    "button1": "Xem thêm sản phẩm liên quan đến ",
+    "link1": "/vn/san-pham?function=%2C",
+    "notfound": "Không tìm thấy sản phẩm nào, vui lòng thử tìm kiếm lại bằng từ khóa khác hoặc chọn loại sản phẩm khác"
   },
 
   "ContactPage": {

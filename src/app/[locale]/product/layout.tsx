@@ -11,7 +11,7 @@ type Props = {
 
   export async function generateMetadata({
     params,
-  }: Omit<Props, 'children'>) {
+  }: Omit<Props, 'children' | 'title'>) {
     const {locale}= await params;
     const t = await getTranslations({locale, namespace: 'LocaleLayout'});
     setRequestLocale(locale);

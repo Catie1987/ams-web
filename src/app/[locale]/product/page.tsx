@@ -11,6 +11,7 @@ import { Suspense } from 'react';
 import LoadingFallback from '@/components/shared/LoadingFallback';
 import { Button } from '@/components/ui/button';
 import { Mail } from 'lucide-react';
+import BreadCrumb from '@/components/layouts/BreadCrumb';
 
 type Props = {
   params: Promise<{ locale: string }>;

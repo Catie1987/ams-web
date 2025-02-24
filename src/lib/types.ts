@@ -55,10 +55,12 @@ export interface ProductDetailItem extends ProductDetail {
 }
 
 export interface TypeDetail {
+  locale: string;
   title: string;
   category: string;
   image?: ImageFieldsFragment;
   slug: string;
+  subTitle?: RichTextContent;
 };
 
 export interface FunctionCollection { 
@@ -67,12 +69,15 @@ export interface FunctionCollection {
 
 export interface FunctionDetail {
   title: string;
-  image: ImageFieldsFragment;
+  image?: ImageFieldsFragment;
+  slug: string;
+  subTitle?: RichTextContent;
 };
 
 export interface MakerDetail {
   makerName: string;
   logo?: ImageFieldsFragment;
+  slug: string;
 };
 
 

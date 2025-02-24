@@ -5,7 +5,6 @@ import Title from '@/components/shared/Title';
 import { Separator } from '@/components/ui/separator';
 import { ProductDetail } from '@/lib/types';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import React, { FC, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Icons } from '@/components/Icons';
@@ -17,7 +16,6 @@ interface ProductListProps {
 
 const ProductList:FC<ProductListProps> = ({productList}) => {
   const {id, name, image, packing, maker,shelflife, type, functionCollection} = productList;
-  const productPath = usePathname();
   const t = useTranslations('ProductPage');
   const [functions, setFunctions] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
@@ -40,7 +38,7 @@ const ProductList:FC<ProductListProps> = ({productList}) => {
   return (
     <li className='list-none py-4'>
        <div className='relative flex flex-row gap-4 overflow-hidden h-full'>
-          <Link href={`${productPath}/${id}`} className='px-0 md:px-2 h-auto w-auto basis-1/3 relative'>
+          <Link href={`${t('productlink')}/${id}`} className='px-0 md:px-2 h-auto w-auto basis-1/3 relative'>
                 <OptimizedImage alt='' src={image.url}/>
                 {maker?.logo?.url &&
                 <div className='items-start h-8 flex absolute bg-white bottom-0 left-2'>
@@ -82,7 +80,7 @@ const ProductList:FC<ProductListProps> = ({productList}) => {
               </li>
             </ul>
             <Link className='overflow-hidden hover:bg-[--cta] bg-[--cta2] w-fit px-8 flex h-10 items-center border border-transparent rounded-full gap-4 justify-center' 
-             href={`${productPath}/${id}`}>
+             href={`${t('productlink')}/${id}`}>
               <p className='text-sm text-white'>{t('detail')}</p>
               <Icons.arrowRightWhite/>
             </Link>

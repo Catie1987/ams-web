@@ -82,7 +82,7 @@ const SelectType: FC<SelectTypeProps> = ({
       })
       return () => subcription.unsubscribe();
     }, [watch]);
-    
+    const uniqueProductTypes = Array.from(new Set(productTypes.map(type => type.category)));
   return (
     <Accordion type="single" collapsible className="w-full mt-4">
         <div className='flex items-center justify-between'>
@@ -115,11 +115,11 @@ const SelectType: FC<SelectTypeProps> = ({
             <FormProvider {...methods}> 
                 <form className="space-y-8"> 
                     <ul className='flex flex-col gap-2'> 
-                        {productTypes.map((type, index) => ( 
+                        {uniqueProductTypes.map((category, index) => ( 
                         <CheckboxItems 
                         key={index} name="types" 
-                        value={type?.category} 
-                        label={type?.category} 
+                        value={category} 
+                        label={category} 
                         onChange={() => handleFilterChange()}
                         /> ))} 
                     </ul> 

@@ -168,7 +168,17 @@
     "des5": "Establish a specialized team to strengthen cooperation with the Shinetsu Silicone Group"
   },
   "ValuePage": {
-    "intro": "Core Values"
+    "intro": "Core Values",
+    "title1": "Leadership",
+    "des1": "We lead by example, lifting people’s vision to a higher level, the raising of their performance to a higher standard, the building of their personality beyond its normal limitations, so that others are motivated to follow towards the achievement of shared vision. We foster an environment within the organization that encourages risk taking, recognition, rewards and empowerment allowing leadership skills to emerge.",
+    "title2": "Ethics",
+    "des2": "We willingly comply with the highest ethical standards to serve the best interests of the customers and the society. We behave in a way that makes our people, customers and society trust our business by being fair, honest & loyal. We demonstrate transparency by sharing knowledge to create a culture where our people are able to contribute freely.",
+    "title3": "Empowerment",
+    "des3": "By delegating authority we create an environment in which our people take decisions with responsibility and accountability to achieve our Mission and Vision.",
+    "title4": "Professionalism",
+    "des4": "We follow best business practices so that we are recognized for our expertise to serve the best interest of our customers and the society. We foster respect and trust, simplify transactions and make the quality of life more enjoyable and satisfying with planning, teamwork and knowledge.",
+    "title5": "Open to change",
+    "des5": "We provide the framework for our people to be innovative and proactive and create new opportunities. We improve our performance by creating a culture of active participation by all our people to add value to the way we work."
   },
   "BusinessPage": {
     "intro": "From parts to finished products, we offer optimal solutions",
@@ -443,6 +453,7 @@
   "BlogPage": {
     "readmore": "Read more",
     "goback": "Go back",
+    "backlink": "/en/blog",
     "related": "Related Articles",
     "notfound": "No posts found, please try to search again with different keywords or choose another category",
     "select": "Select category...",
@@ -477,7 +488,8 @@
     "bytype": "by Product Type",
     "byfunction": "by Function",
     "show": "Showing results",
-    "oftotal": " of totals"
+    "oftotal": " of totals",
+    "productlink": "/en/product"
   },
   "LocaleLayout": {
     "title": "AMS VIETNAM",
@@ -502,12 +514,13 @@
     "business6" : "Medical",
     "business7" : "Battery Energy",
     "business8" : "Construction",
-
     "product" : "PRODUCT | AMS VIETNAM",
-    "product-des" : "a",
+    "product-des" : "We can provide precisely the products, information, and services that our customers want. This is why AMS is chosen by its customers.",
     "maker": "MAKER",
+    "type": "PRODUCT TYPE",
+    "function": "FUNCTION APPLICATION",
     "blog" : "ARTICLES | AMS VIETNAM",
-    "blog-des": "a"
+    "blog-des": "We can provide precisely the products, information, and services that our customers want. This is why AMS is chosen by its customers."
   },
   "LocaleSwitcher": {
     "label": "Select language",
@@ -554,7 +567,64 @@
     "search": "Search any products here",
     "search-input": "product name...",
     "blog": "Articles",
-    "contact": "Contact us"
+    "contact": "Contact us",
+    "maker": "Maker",
+    "type": "Product Type",
+    "function": "Function Application"
+  },
+
+  "MakerPage": {
+    "intro": "Manufacturers",
+    "content": "AMS is the only distributor offering over 40 of the industry's top manufacturers of high performance adhesives, sealants, conformal coatings, encapsulants, dispensing equipment, specialty chemicals, and UV curing equipment from one source. We offer our most popular products online. If you're unable to find what you are looking for, request a quote and we'll check our extensive offline inventory. If you need help selecting a product",
+    "button": "Contact us",
+    "link": "/en/contact",
+    "goback": "Go back",
+    "backlink": "/en/product/maker/",
+    "sub1": "As a",
+    "sub2": "'s distributor, AMS has made a commitment to understanding more than just maker field. We understand the importance of serving industrial design and assembly customers with direct access to the right" ,
+    "sub3": ", and technical support for your applications.",
+    "feature": "Feature Products",
+    "featurecontent1": "Beside are just a few items of the maker",
+    "featurecontent2": "'s feature products. In addition, we can also provide total",
+    "featurecontent3":"products depending on the needs of our customers.",
+    "featurecontent4": "We look forward to support and advise you further.",
+    "button1": "Products page",
+    "link1": "/en/product?maker=%2C",
+    "notfound": "No products found, please try to search again with different keywords or choose another maker"
+  },
+
+  "TypePage" : {
+    "intro": "Products Type",
+    "content": "At AMS, we take pride in offering an extensive range of product types specifically tailored for the electronic industries. With a deep understanding of the unique demands and challenges within this market, we are fully equipped to support our customers in meeting their requirements. Our dedicated team works closely with clients to ensure that every product is designed and manufactured to the highest standards, providing innovative solutions that enhance performance and reliability. Whether you're looking for cutting-edge components or custom-designed solutions, our commitment to excellence and customer satisfaction sets us apart as a trusted partner in the electronic industries.",
+    "button": "Contact us",
+    "link": "/en/contact",
+    "goback": "Go back",
+    "backlink": "/en/product/type/",
+    "feature": "Typical Products",
+    "featurecontent1": "Beside are just a few items of the product type",
+    "featurecontent2": ". In addition, we can also provide total",
+    "featurecontent3":"products related to this category depending on the needs of our customers.",
+    "featurecontent4": "We look forward to support and advise you further.",
+    "button1": "View more products related with ",
+    "link1": "/en/product?type=%2C",
+    "notfound": "No products found, please try to search again with different keywords or choose another product type"
+  },
+
+  "FunctionPage": {
+    "intro": "Function Application",
+    "content": "AMS is dedicated to providing a diverse range of functional products designed for various applications. From cutting-edge gadgets and innovative devices to essential components and accessories, our offerings cater to the ever-evolving needs of the electronic industry. Whether you are looking for high-performance solutions for industrial applications, reliable components for consumer electronics, or advanced tools for professional use, our products deliver exceptional quality and performance. With a commitment to continuous innovation and customer satisfaction, we ensure that our products meet the highest standards and offer practical solutions for a wide array of electronic applications.",
+    "button": "Contact us",
+    "link": "/en/contact",
+    "goback": "Go back",
+    "backlink": "/en/product/type/",
+    "feature": "Typical Products",
+    "featurecontent1": "Beside are just a few items of the product use for",
+    "featurecontent2": ". In addition, we can also provide total",
+    "featurecontent3":"products related to this category depending on the needs of our customers.",
+    "featurecontent4": "We look forward to support and advise you further.",
+    "button1": "View more products related with ",
+    "link1": "/en/product?function=%2C",
+    "notfound": "No products found, please try to search again with different keywords or choose another product type"
   },
 
   "ContactPage": {
