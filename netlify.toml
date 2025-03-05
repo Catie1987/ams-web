@@ -4,3 +4,9 @@
 
 [context.production.environment]
   NPM_FLAGS = "--force"
+
+  [[redirects]]
+    from = "/*"
+    to = "https://amsvn.net"
+    status = 301
+    force = true
