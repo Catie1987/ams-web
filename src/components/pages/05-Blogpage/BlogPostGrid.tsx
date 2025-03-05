@@ -1,9 +1,9 @@
 import React, { FC, Suspense } from 'react';
-import { getBlogposts} from '@/lib/clients/contentful';
-import { BlogPost } from '@/lib/types';
+import { getBlogposts} from '../../../lib/clients/contentful';
+import { BlogPost } from '../../../lib/types';
 import BlogPostItem from './BlogPostItem';
 import { getLocale, getTranslations } from 'next-intl/server';
-import { Separator } from '@/components/ui/separator';
+import { Separator } from '../../../components/ui/separator';
 import BlogSkeleton from './BlogSkeleton';
 
 interface BlogPostsGridProps { 

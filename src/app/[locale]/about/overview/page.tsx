@@ -1,9 +1,9 @@
-import AnimatedLine from '@/components/features/AnimatedLine';
-import AnimatedTitle from '@/components/features/AnimatedTitle';
-import FirstPra from '@/components/pages/02-Aboutpage/2a-Overview/FirstPra';
-import SecondPra from '@/components/pages/02-Aboutpage/2a-Overview/SecondPra';
-import Title from '@/components/shared/Title';
-import { Locale } from '@/i18n/routing';
+import AnimatedLine from '../../../../components/features/AnimatedLine';
+import AnimatedTitle from '../../../../components/features/AnimatedTitle';
+import FirstPra from '../../../../components/pages/02-Aboutpage/2a-Overview/FirstPra';
+import SecondPra from '../../../../components/pages/02-Aboutpage/2a-Overview/SecondPra';
+import Title from '../../../../components/shared/Title';
+import { Locale } from '../../../../i18n/routing';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type Props = {

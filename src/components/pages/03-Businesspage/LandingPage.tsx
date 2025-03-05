@@ -1,14 +1,14 @@
 "use client"
-import AnimatedLine from '@/components/features/AnimatedLine'
-import AnimatedTitle from '@/components/features/AnimatedTitle'
-import Title from '@/components/shared/Title'
+import AnimatedLine from '../../../components/features/AnimatedLine'
+import AnimatedTitle from '../../../components/features/AnimatedTitle'
+import Title from '../../../components/shared/Title'
 import { useTranslations } from 'next-intl';
 import {motion} from 'framer-motion'
 import React from 'react';
 import Image from 'next/image';
 
-import pic1 from "../../../../public/assets/image/Business/listImageBox-pc-4.jpg"
-import ArrowDown from '@/components/features/Arrow-Down';
+import pic1 from "/public/assets/image/Business/listImageBox-pc-4.jpg"
+import ArrowDown from '../../../components/features/Arrow-Down';
 
 
 export default function LandingPage() {

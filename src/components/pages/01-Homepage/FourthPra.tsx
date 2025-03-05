@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Rss } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs2";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../../components/ui/tabs2";
 import Link from 'next/link';
 import BlogList from './BlogList';
 import BlogIntro from './BlogIntro';

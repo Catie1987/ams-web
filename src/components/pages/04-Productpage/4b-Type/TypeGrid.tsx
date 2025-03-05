@@ -1,8 +1,8 @@
 import React from 'react';
-import { getFilterProductTypes } from '@/lib/clients/contentful';
+import { getFilterProductTypes } from '../../../../lib/clients/contentful';
 import TypeName from './TypeName';
 import { getLocale } from 'next-intl/server';
-import { TypeDetail } from '@/lib/types';
+import { TypeDetail } from '../../../../lib/types';
 
 const localeMap: { [key: string]: string } = { 
     en: 'en-US', 

@@ -1,10 +1,10 @@
 "use client";
 import React from 'react';
-import earth from '../../../../public/assets/image/earth.png';
+import earth from '/public/assets/image/earth.png';
 import { motion } from 'framer-motion'
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import Title from '@/components/shared/Title';
+import Title from '../../../components/shared/Title';
 
 export default function FirstPra() {
     const t = useTranslations('AboutPage')

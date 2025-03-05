@@ -1,5 +1,5 @@
-import { getProducts } from '@/lib/clients/contentful';
-import { ProductDetail } from '@/lib/types';
+import { getProducts } from '../../../lib/clients/contentful';
+import { ProductDetail } from '../../../lib/types';
 import { getLocale, getTranslations } from 'next-intl/server';
 import React, { FC } from 'react';
 import ProductList from './ProductList';

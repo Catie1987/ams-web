@@ -1,14 +1,14 @@
 "use client"
 import React, { FC} from 'react';
-import { BlogPost } from '@/lib/types';
-import Title from '@/components/shared/Title';
-import OptimizedImage from '@/components/features/OptimizedImage';
+import { BlogPost } from '../../../lib/types';
+import Title from '../../../components/shared/Title';
+import OptimizedImage from '../../../components/features/OptimizedImage';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import HoverOverlay from '@/components/features/HoverOverlay';
+import HoverOverlay from '../../../components/features/HoverOverlay';
 import Link from 'next/link';
-import { useIsMobile } from '@/lib/hooks/useIsMobile';
-import { Icons } from '@/components/Icons';
-import { Separator } from '@/components/ui/separator';
+import { useIsMobile } from '../../../lib/hooks/useIsMobile';
+import { Icons } from '../../../components/Icons';
+import { Separator } from '../../../components/ui/separator';
 import { useTranslations } from 'next-intl';
 
 interface BlogPostItemProps {

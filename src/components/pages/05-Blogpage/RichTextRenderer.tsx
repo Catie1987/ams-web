@@ -1,11 +1,11 @@
-import slugify from '@/lib/helpers';
-import { RichTextContent } from '@/lib/types';
+import slugify from '../../../lib/helpers';
+import { RichTextContent } from '../../../lib/types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
 import { FC } from 'react';
 import CodeHighlighter from './CodeHighlighter';
-import OptimizedImage from '@/components/features/OptimizedImage';
-import Title from '@/components/shared/Title';
+import OptimizedImage from '../../../components/features/OptimizedImage';
+import Title from '../../../components/shared/Title';
 
 
 interface RichTextRendererProps extends React.HTMLProps<HTMLDivElement> {

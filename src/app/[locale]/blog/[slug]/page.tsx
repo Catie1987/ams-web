@@ -1,15 +1,15 @@
 import React from 'react';
-import Container from '@/components/layouts/Container';
-import { getBlogpost, getBlogposts } from '@/lib/clients/contentful';
+import Container from '../../../../components/layouts/Container';
+import { getBlogpost, getBlogposts } from '../../../../lib/clients/contentful';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import Title from '@/components/shared/Title';
-import { Separator } from '@/components/ui/separator';
-import Headlines from '@/components/pages/05-Blogpage/Headlines';
-import RichTextRenderer from '@/components/pages/05-Blogpage/RichTextRenderer';
-import RelatedPostGrid from '@/components/pages/05-Blogpage/RelatedPost';
-import { Link } from '@/i18n/routing';
-import { Icons } from '@/components/Icons';
+import Title from '../../../../components/shared/Title';
+import { Separator } from '../../../../components/ui/separator';
+import Headlines from '../../../../components/pages/05-Blogpage/Headlines';
+import RichTextRenderer from '../../../../components/pages/05-Blogpage/RichTextRenderer';
+import RelatedPostGrid from '../../../../components/pages/05-Blogpage/RelatedPost';
+import { Link } from '../../../../i18n/routing';
+import { Icons } from '../../../../components/Icons';
 
 type Params = Promise<{ 
     slug: string,
@@ -21,18 +21,20 @@ const localeMap: { [key: string]: string } = {
     vn: 'vi-VN', 
 };
 
-export async function generateStaticParams(props: {
-    params: Params;
-}) {
-    const locale = await props.params;
-    const contentfulLocale = localeMap[locale as unknown as string] || 'en-US';
-    const blogPosts = await getBlogposts({
-        locale: contentfulLocale,
-    });
-    return blogPosts.map((blogPost) => ({
-        slug: blogPost.slug!,
-    }))
-  };
+export async function generateStaticParams() {
+    const locales = Object.keys(localeMap);
+    const allBlogPosts = await Promise.all(
+      locales.map(async (locale) => {
+        const contentfulLocale = localeMap[locale];
+        const blogPosts = await getBlogposts({ locale: contentfulLocale });
+        return blogPosts.map((blogPost) => ({
+          slug: blogPost.slug!,
+          locale,
+        }));
+      })
+    );
+    return allBlogPosts.flat();
+  }
 
   export async function generateMetadata(props: {
     params: Params

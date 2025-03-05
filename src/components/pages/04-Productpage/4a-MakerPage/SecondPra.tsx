@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import LoadingFallback from '@/components/shared/LoadingFallback';
+import LoadingFallback from '../../../../components/shared/LoadingFallback';
 import ProductsGrid from './ProductGridMaker';
 
 type Props = {

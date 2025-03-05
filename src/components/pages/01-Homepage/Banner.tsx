@@ -1,23 +1,23 @@
 "use client";
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import banner1 from '../../../../public/assets/image/banner1.jpg';
-import banner2 from '../../../../public/assets/image/banner2.jpg';
-import banner3 from '../../../../public/assets/image/banner3.jpg';
-import banner4 from '../../../../public/assets/image/banner4.jpg';
+import banner1 from '/public/assets/image/banner2.jpg';
+import banner2 from '/public/assets/image/banner2.jpg';
+import banner3 from '/public/assets/image/banner2.jpg';
+import banner4 from '/public/assets/image/banner2.jpg';
 import {
   Carousel,
   CarouselContent,
   CarouselDots,
   CarouselItem,
-} from "@/components/ui/carousel-square";
-import { type CarouselApi } from "@/components/ui/carousel-square"
+} from "../../../components/ui/carousel-square";
+import { type CarouselApi } from "../../../components/ui/carousel-square"
 import Fade from 'embla-carousel-fade';
 import Autoplay from 'embla-carousel-autoplay'
 import { useTranslations } from 'next-intl';
-import Title from '@/components/shared/Title';
-import Container from '@/components/layouts/Container';
-import ArrowRight from '@/components/features/Arrow-Right-cta';
+import Title from '../../../components/shared/Title';
+import Container from '../../../components/layouts/Container';
+import ArrowRight from '../../../components/features/Arrow-Right-cta';
 import { motion, Variants } from 'framer-motion';
 
 export default function Banner() {

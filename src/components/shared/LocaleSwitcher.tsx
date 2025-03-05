@@ -1,6 +1,6 @@
 import {useLocale, useTranslations} from 'next-intl';
 import LocaleSwitcherSelect from './LocaleSwitcherSelect';
-import { SelectItem } from "@/components/ui/select";
+import { SelectItem } from "../../components/ui/select";
 import { Icons } from '../Icons';
 
 const locales = [ 

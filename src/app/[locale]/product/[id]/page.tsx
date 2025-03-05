@@ -1,18 +1,18 @@
-import MakerImage from '@/components/features/MakerImage';
-import OptimizedImage from '@/components/features/OptimizedImage';
-import Container from '@/components/layouts/Container';
-import RichTextRenderer from '@/components/pages/05-Blogpage/RichTextRenderer';
+import MakerImage from '../../../../components/features/MakerImage';
+import OptimizedImage from '../../../../components/features/OptimizedImage';
+import Container from '../../../../components/layouts/Container';
+import RichTextRenderer from '../../../../components/pages/05-Blogpage/RichTextRenderer';
 import { Printer, Mail, ArrowDownToLine } from 'lucide-react';
-import Title from '@/components/shared/Title';
-import { Separator } from '@/components/ui/separator';
-import { getProductItem, getProducts } from '@/lib/clients/contentful';
+import Title from '../../../../components/shared/Title';
+import { Separator } from '../../../../components/ui/separator';
+import { getProductItem, getProducts } from '../../../../lib/clients/contentful';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import React from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Icons } from '@/components/Icons';
-import { Link } from '@/i18n/routing';
-import RelatedProductGrid from '@/components/pages/04-Productpage/RelatedProduct';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../../../components/ui/tabs";
+import { Icons } from '../../../../components/Icons';
+import { Link } from '../../../../i18n/routing';
+import RelatedProductGrid from '../../../../components/pages/04-Productpage/RelatedProduct';
 
 type Params = Promise<{ 
     id: string,
@@ -24,24 +24,27 @@ const localeMap: { [key: string]: string } = {
     vn: 'vi-VN', 
 };
 
-export async function generateStaticParams(props: {
-    params: Params;
-}) {
-    const locale = await props.params;
-    const contentfulLocale = localeMap[locale as unknown as string] || 'en-US';
-    const productItems = await getProducts({
-        locale: contentfulLocale,
-    });
-    return productItems.map((productItem) => ({
-        id: productItem.id!,
-    }))
-  };
+export async function generateStaticParams() {
+    const locales = Object.keys(localeMap);
+    const allProductItems = await Promise.all(
+      locales.map(async (locale) => {
+        const contentfulLocale = localeMap[locale];
+        const productItems = await getProducts({ locale: contentfulLocale });
+        return productItems.map((productItem) => ({
+          id: productItem.id!,
+          locale,
+        }));
+      })
+    );
+    return allProductItems.flat();
+  }
 
 export async function generateMetadata(props: {
     params: Params
   }) {
     const params = await props.params;
-    const ProductItem = await getProductItem(params.id);
+    const contentfulLocale = localeMap[params.locale as unknown as string] || 'en-US';
+    const ProductItem = await getProductItem(params.id, contentfulLocale);
     if(!ProductItem) {
       
       return;

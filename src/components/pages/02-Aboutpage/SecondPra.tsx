@@ -3,11 +3,11 @@ import { useTranslations } from 'next-intl';
 import {motion} from "framer-motion";
 import React, { ReactNode, useState } from 'react';
 import { Diamond } from 'lucide-react';
-import Title from '@/components/shared/Title';
-import { useIsMobile } from '@/lib/hooks/useIsMobile';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import AnimatedTitle from '@/components/features/AnimatedTitle';
-import AnimatedLine from '@/components/features/AnimatedLine';
+import Title from '../../../components/shared/Title';
+import { useIsMobile } from '../../../lib/hooks/useIsMobile';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../../components/ui/accordion';
+import AnimatedTitle from '../../../components/features/AnimatedTitle';
+import AnimatedLine from '../../../components/features/AnimatedLine';
 
 interface WhyListProps {
     icon: ReactNode;

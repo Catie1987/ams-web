@@ -1,8 +1,8 @@
-import PageLayout from '@/components/shared/PageLayout';
+import PageLayout from '../../../components/shared/PageLayout';
 import React, { ReactNode } from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import BreadCrumb from '@/components/layouts/BreadCrumb';
-import Banner from '@/components/pages/04-Productpage/Banner';
+import BreadCrumb from '../../../components/layouts/BreadCrumb';
+import Banner from '../../../components/pages/04-Productpage/Banner';
 
 type Props = {
     children: ReactNode;

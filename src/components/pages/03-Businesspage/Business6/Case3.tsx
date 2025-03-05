@@ -1,20 +1,20 @@
 "use client";
-import { Link } from '@/i18n/routing';
-import Title from '@/components/shared/Title';
+import { Link } from '../../../../i18n/routing';
+import Title from '../../../../components/shared/Title';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import Image from 'next/image';
-import img1 from '../../../../../public/assets/business6/internal1.webp';
-import img2 from '../../../../../public/assets/business6/internal2.webp';
-import img3 from '../../../../../public/assets/business6/internal3.jpg';
-import img4 from '../../../../../public/assets/business6/internal4.png';
-import img5 from '../../../../../public/assets/business6/internal5.avif';
+import img1 from '/public/assets/business6/internal1.webp';
+import img2 from '/public/assets/business6/internal2.webp';
+import img3 from '/public/assets/business6/internal3.jpg';
+import img4 from '/public/assets/business6/internal4.png';
+import img5 from '/public/assets/business6/internal5.avif';
 import {
   Carousel,
   CarouselContent,
   CarouselDots,
   CarouselItem,
-} from "@/components/ui/carousel"
+} from "../../../../components/ui/carousel"
 
 export default function Case3() {
   const t = useTranslations('BusinessPage.medical');

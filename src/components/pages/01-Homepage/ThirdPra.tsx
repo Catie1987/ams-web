@@ -1,17 +1,17 @@
 "use client";
-import Title from '@/components/shared/Title';
+import Title from '../../../components/shared/Title';
 import { motion, Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import Image from 'next/image';
-import partner from '../../../../public/assets/home/partner.jpg';
-import shinetsu from '../../../../public/assets/home/shinetsu.png';
-import ad1 from '../../../../public/assets/home/ad1.jpg';
-import ad2 from '../../../../public/assets/home/ad2.jpg';
-import ad3 from '../../../../public/assets/home/ad3.jpg';
-import ad4 from '../../../../public/assets/home/ad4.webp';
+import partner from '/public/assets/home/partner.jpg';
+import shinetsu from '/public/assets/home/shinetsu.png';
+import ad1 from '/public/assets/home/ad1.jpg';
+import ad2 from '/public/assets/home/ad2.jpg';
+import ad3 from '/public/assets/home/ad3.jpg';
+import ad4 from '/public/assets/home/ad4.webp';
 import Link from 'next/link';
-import ArrowRight from '@/components/features/Arrow-Right-cta2';
+import ArrowRight from '../../../components/features/Arrow-Right-cta2';
 
 export default function ThirdPra() {
     const t = useTranslations('HomePage.ThirdPra');

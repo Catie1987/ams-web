@@ -1,5 +1,5 @@
 
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import { useRouter } from "next/navigation";
 import {  useState } from "react";
 import { Search, PencilLine, X } from 'lucide-react';

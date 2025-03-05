@@ -1,18 +1,18 @@
 "use client";
 import React from 'react';
-import Title from '@/components/shared/Title';
+import Title from '../../../components/shared/Title';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import ArrowRight from '@/components/features/Arrow-Right-cta';
+import ArrowRight from '../../../components/features/Arrow-Right-cta';
 import Image from 'next/image';
-import img1 from '../../../../public/assets/home/pic1.webp';
-import img2 from '../../../../public/assets/home/pic2.jpg';
-import img3 from '../../../../public/assets/home/pic3.png';
-import img4 from '../../../../public/assets/home/pic4.png';
-import img5 from '../../../../public/assets/home/pic5.webp';
-import img6 from '../../../../public/assets/home/pic6.avif';
-import img7 from '../../../../public/assets/home/pic7.webp';
-import img8 from '../../../../public/assets/home/pic8.webp';
+import img1 from '/public/assets/home/pic1.webp';
+import img2 from '/public/assets/home/pic2.jpg';
+import img3 from '/public/assets/home/pic3.png';
+import img4 from '/public/assets/home/pic4.png';
+import img5 from '/public/assets/home/pic5.webp';
+import img6 from '/public/assets/home/pic6.avif';
+import img7 from '/public/assets/home/pic7.webp';
+import img8 from '/public/assets/home/pic8.webp';
 import { HousePlug, Leaf, Recycle } from 'lucide-react';
 import Link from 'next/link';
 

@@ -2,8 +2,8 @@
 
 import {useTranslations} from 'next-intl';
 import {useEffect} from 'react';
-import PageLayout from '@/components/shared/PageLayout';
-import Title from '@/components/shared/Title';
+import PageLayout from '../../components/shared/PageLayout';
+import Title from '../../components/shared/Title';
 
 type Props = {
   error: Error;

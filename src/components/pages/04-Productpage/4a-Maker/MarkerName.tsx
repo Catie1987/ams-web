@@ -1,13 +1,13 @@
 "use client";
 import React, { FC } from 'react';
-import { MakerDetail } from '@/lib/types';
-import MakerImage from '@/components/features/MakerImage';
+import { MakerDetail } from '../../../../lib/types';
+import MakerImage from '../../../../components/features/MakerImage';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "../../../../components/ui/tooltip";
 import Link from 'next/link';
 import { motion } from 'framer-motion'
 

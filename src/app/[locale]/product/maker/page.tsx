@@ -1,8 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import FirstPra from '@/components/pages/04-Productpage/4a-Maker/FirstPra';
-import GroupMaker from '@/components/pages/04-Productpage/4a-Maker/GroupMaker';
+import FirstPra from '../../../../components/pages/04-Productpage/4a-Maker/FirstPra';
+import GroupMaker from '../../../../components/pages/04-Productpage/4a-Maker/GroupMaker';
 
 type Props = {
     params: Promise<{ locale: string }>;

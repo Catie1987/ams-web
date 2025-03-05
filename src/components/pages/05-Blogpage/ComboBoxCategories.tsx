@@ -2,22 +2,22 @@
 
 import * as React from 'react';
 import { Check, ChevronsUpDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
+import { cn } from '../../../lib/utils';
+import { Button } from '../../../components/ui/button';
 import {
   Command,
   CommandGroup,
   CommandItem,
   CommandList,
   CommandSeparator,
-} from '@/components/ui/command';
+} from '../../../components/ui/command';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/components/ui/popover';
+} from '../../../components/ui/popover';
 import { useTranslations } from 'next-intl';
-import { Locale } from '@/i18n/routing';
+import { Locale } from '../../../i18n/routing';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 const categoriesByLocale = {

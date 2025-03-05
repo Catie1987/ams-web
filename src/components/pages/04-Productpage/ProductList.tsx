@@ -1,13 +1,13 @@
 "use client"
-import OptimizedImage from '@/components/features/OptimizedProductImage';
-import MakerImage from '@/components/features/MakerImage';
-import Title from '@/components/shared/Title';
-import { Separator } from '@/components/ui/separator';
-import { ProductDetail } from '@/lib/types';
+import OptimizedImage from '../../../components/features/OptimizedProductImage';
+import MakerImage from '../../../components/features/MakerImage';
+import Title from '../../../components/shared/Title';
+import { Separator } from '../../../components/ui/separator';
+import { ProductDetail } from '../../../lib/types';
 import Link from 'next/link';
 import React, { FC, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Icons } from '@/components/Icons';
+import { Icons } from '../../../components/Icons';
 import ProductSkeleton from './ProductSkeleton';
 
 interface ProductListProps {

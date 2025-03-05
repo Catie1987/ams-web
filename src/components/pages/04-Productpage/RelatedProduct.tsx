@@ -1,7 +1,7 @@
-import MakerImage from '@/components/features/MakerImage';
-import Title from '@/components/shared/Title';
-import { getRelatedProducts } from '@/lib/clients/contentful';
-import { ProductDetail } from '@/lib/types';
+import MakerImage from '../../../components/features/MakerImage';
+import Title from '../../../components/shared/Title';
+import { getRelatedProducts } from '../../../lib/clients/contentful';
+import { ProductDetail } from '../../../lib/types';
 import { getLocale, getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import React from 'react'

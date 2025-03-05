@@ -1,12 +1,9 @@
-import FirstPra from '@/components/pages/04-Productpage/4c-FunctionPage/FirstPra';
-import SecondPra from '@/components/pages/04-Productpage/4c-FunctionPage/SecondPra';
-import { getFunction, getFunctions } from '@/lib/clients/contentful';
+import FirstPra from '../../../../../components/pages/04-Productpage/4c-FunctionPage/FirstPra';
+import SecondPra from '../../../../../components/pages/04-Productpage/4c-FunctionPage/SecondPra';
+import { getFunction, getFunctions } from '../../../../../lib/clients/contentful';
+import { setRequestLocale } from 'next-intl/server';
 import React from 'react';
 
-type Props = Promise<{ 
-    slug: string,
-    locale: string,
-}>;
 
 const localeMap: { [key: string]: string } = { 
     en: 'en-US', 
@@ -14,17 +11,27 @@ const localeMap: { [key: string]: string } = {
 };
 
 export async function generateStaticParams() {
-    const productFunctions = await getFunctions();
-    return productFunctions.map((func) => ({
+  const locales = Object.keys(localeMap);
+  const allFunctions = await Promise.all(
+    locales.map(async (locale) => {
+      const contentfulLocale = localeMap[locale];
+      const functions = await getFunctions(contentfulLocale);
+      return functions.map((func) => ({
         slug: func.slug!,
-    }))
-  };
+        locale,
+      }));
+    })
+  );
+  return allFunctions.flat();
+}
 
-  export async function generateMetadata(props: {
-    params: Props
+  export async function generateMetadata({params}: {
+    params: Promise<{ locale: string; slug: string }>
   }) {
-    const params = await props.params;
-    const Function = await getFunction(params.slug);
+    const {locale, slug}= await params;
+    setRequestLocale(locale);
+    const contentfulLocale = locale === 'vn' ? 'vi-VN' : 'en-US';
+    const Function = await getFunction(slug, contentfulLocale);
     if(!Function) {
       
       return;
@@ -36,11 +43,13 @@ export async function generateStaticParams() {
     }
   }
 
-export default async function FunctionPage(props: {
-    params: Props;
+export default async function FunctionPage({params}: {
+  params: Promise<{ locale: string; slug: string }>
 }) {
-    const params = await props.params;
-    const Function = await getFunction(params.slug);
+  const {locale, slug}= await params;
+  setRequestLocale(locale);
+  const contentfulLocale = locale === 'vn' ? 'vi-VN' : 'en-US';
+  const Function = await getFunction(slug, contentfulLocale);
     if(!Function) {
       
       return;

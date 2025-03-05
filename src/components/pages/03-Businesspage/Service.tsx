@@ -1,15 +1,15 @@
 "use client";
-import AnimatedLine from '@/components/features/AnimatedLine';
-import AnimatedTitle from '@/components/features/AnimatedTitle';
-import img1 from '../../../../public/assets/image/Business/listImageBox-mb-1.jpg';
-import img2 from '../../../../public/assets/image/Business/listImageBox-mb-2.jpg'
-import img3 from '../../../../public/assets/image/Business/listImageBox-mb-3.jpg'
-import Title from '@/components/shared/Title';
+import AnimatedLine from '../../../components/features/AnimatedLine';
+import AnimatedTitle from '../../../components/features/AnimatedTitle';
+import img1 from '/public/assets/image/Business/listImageBox-mb-1.jpg';
+import img2 from '/public/assets/image/Business/listImageBox-mb-2.jpg'
+import img3 from '/public/assets/image/Business/listImageBox-mb-3.jpg'
+import Title from '../../../components/shared/Title';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import {motion, Variants} from 'framer-motion';
-import { useIsMobile } from '@/lib/hooks/useIsMobile';
+import { useIsMobile } from '../../../lib/hooks/useIsMobile';
 
 export default function Service() {
     const t = useTranslations('BusinessPage');

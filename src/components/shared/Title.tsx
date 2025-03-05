@@ -1,6 +1,6 @@
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 import React, { ElementType, FC, HTMLAttributes } from 'react';
-import { lora } from '@/lib/fonts';
+import { lora } from '../../lib/fonts';
 
 interface TitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';

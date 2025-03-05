@@ -1,20 +1,20 @@
 "use client";
-import { Link } from '@/i18n/routing';
-import Title from '@/components/shared/Title';
+import { Link } from '../../../../i18n/routing';
+import Title from '../../../../components/shared/Title';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import Image from 'next/image';
-import img1 from '../../../../../public/assets/business5/house1.jpg';
-import img2 from '../../../../../public/assets/business5/house2.png';
-import img3 from '../../../../../public/assets/business5/house3.jpg';
-import img4 from '../../../../../public/assets/business5/house4.jpg';
-import img5 from '../../../../../public/assets/business5/house5.png';
+import img1 from '/public/assets/business5/house1.jpg';
+import img2 from '/public/assets/business5/house2.png';
+import img3 from '/public/assets/business5/house3.jpg';
+import img4 from '/public/assets/business5/house4.jpg';
+import img5 from '/public/assets/business5/house5.png';
 import {
   Carousel,
   CarouselContent,
   CarouselDots,
   CarouselItem,
-} from "@/components/ui/carousel"
+} from "../../../../components/ui/carousel"
 
 export default function Case5() {
   const t = useTranslations('BusinessPage.electronic');

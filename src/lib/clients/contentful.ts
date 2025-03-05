@@ -379,9 +379,9 @@ export const getProductItem = async (
   return ProductItem;
 };
 
-export const getMakers = async (): Promise<MakerDetail[]> => {
+export const getMakers = async (locale: string = ""): Promise<MakerDetail[]> => {
   const gqlQuery = `{
-    manufactureCollection (order: makerName_ASC) {
+    manufactureCollection (locale: "${locale}", order: makerName_ASC) {
       items{
         makerName
         logo {
@@ -405,7 +405,7 @@ export const getMakers = async (): Promise<MakerDetail[]> => {
 
 export const getMaker = async (
   slug: string,
-  locale: string = "en-US",
+  locale: string = "",
 ): Promise<MakerDetail | null> => {
   const gqlQuery = `{
     manufactureCollection (locale: "${locale}", where: { slug: "${slug}" }, limit: 1) {
@@ -574,9 +574,7 @@ export const getProductsbyMaker = async ({
 makerName = ""
 }: {
   makerName: string
-},{
-  query = ""
-}:getProductsArgsbyMaker = {}) => {
+}) => {
 
   const makerFilter = makerName
   ? `maker: {makerName_in: "${makerName}"}`

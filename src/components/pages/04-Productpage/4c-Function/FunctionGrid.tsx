@@ -1,7 +1,7 @@
 import React from 'react';
 import { getLocale } from 'next-intl/server';
-import { getFunctions } from '@/lib/clients/contentful';
-import { FunctionDetail } from '@/lib/types';
+import { getFunctions } from '../../../../lib/clients/contentful';
+import { FunctionDetail } from '../../../../lib/types';
 import FunctionName from './FunctionName';
 
 const localeMap: { [key: string]: string } = { 

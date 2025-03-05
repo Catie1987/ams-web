@@ -6,8 +6,8 @@ import {
   TableBody,
   TableCell,
   TableRow,
-} from "@/components/ui/table";
-import Title from '@/components/shared/Title';
+} from "../../../../components/ui/table";
+import Title from '../../../../components/shared/Title';
 
 export default function FirstPra() {
   const t = useTranslations('OverviewPage')

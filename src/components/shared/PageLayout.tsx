@@ -1,6 +1,6 @@
 import {useTranslations} from 'next-intl';
 import {ReactNode} from 'react';
-import Container from '../layouts/Container';
+import Container from '../../components/layouts/Container';
 
 type Props = {
   children?: ReactNode;

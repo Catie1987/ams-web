@@ -1,10 +1,10 @@
 "use client";
-import AnimatedLine from '@/components/features/AnimatedLine';
-import AnimatedTitle from '@/components/features/AnimatedTitle';
-import ArrowRight from '@/components/features/Arrow-Right';
-import BusinessIcons from '@/components/features/IconSVG';
-import Title from '@/components/shared/Title';
-import { Link } from '@/i18n/routing';
+import AnimatedLine from '../../../components/features/AnimatedLine';
+import AnimatedTitle from '../../../components/features/AnimatedTitle';
+import ArrowRight from '../../../components/features/Arrow-Right';
+import BusinessIcons from '../../../components/features/IconSVG';
+import Title from '../../../components/shared/Title';
+import { Link } from '../../../i18n/routing';
 import { useTranslations } from 'next-intl';
 import {motion, Variants} from 'framer-motion';
 import React from 'react'

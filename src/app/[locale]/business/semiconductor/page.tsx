@@ -1,6 +1,6 @@
 import {getTranslations, setRequestLocale} from 'next-intl/server';
-import PageLayout from '@/components/shared/PageLayout';
-import Business4 from '@/components/pages/03-Businesspage/Business4/Main';
+import PageLayout from '../../../../components/shared/PageLayout';
+import Business4 from '../../../../components/pages/03-Businesspage/Business4/Main';
 
 type Props = {
   params: Promise<{ locale: string }>;

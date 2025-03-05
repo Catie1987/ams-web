@@ -1,4 +1,4 @@
-import { Separator } from '@/components/ui/separator';
+import { Separator } from '../../../../components/ui/separator';
 import React from 'react'
 import MakerGrid from './MakerGrid';
 

@@ -1,5 +1,5 @@
 'use client';
-import slugify from '@/lib/helpers';
+import slugify from '../../../lib/helpers';
 import Link from 'next/link';
 import React from 'react';
 

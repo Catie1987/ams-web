@@ -5,11 +5,11 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-  } from "@/components/ui/accordion-custom";
+  } from "../../../components/ui/accordion-custom";
 import { useTranslations } from 'next-intl';
-import { Button } from '@/components/ui/button';
+import { Button } from '../../../components/ui/button';
 import { FilterX } from 'lucide-react';
-import { FunctionDetail, MakerDetail, TypeDetail } from '@/lib/types';
+import { FunctionDetail, MakerDetail, TypeDetail } from '../../../lib/types';
 import CheckboxItems from './CheckboxItems';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';

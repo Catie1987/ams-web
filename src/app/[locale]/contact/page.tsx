@@ -1,9 +1,9 @@
 import {getTranslations, setRequestLocale} from 'next-intl/server';
-import PageLayout from '@/components/shared/PageLayout';
-import GoogleMap from '@/components/pages/06-Contactpage/GoogleMap';
-import Title from '@/components/shared/Title';
-import ContactDetail from '@/components/pages/06-Contactpage/ContactDetail';
-import ContactForm from '@/components/pages/06-Contactpage/ContactForm';
+import PageLayout from '../../../components/shared/PageLayout';
+import GoogleMap from '../../../components/pages/06-Contactpage/GoogleMap';
+import Title from '../../../components/shared/Title';
+import ContactDetail from '../../../components/pages/06-Contactpage/ContactDetail';
+import ContactForm from '../../../components/pages/06-Contactpage/ContactForm';
 
 type Props = {
   params: Promise<{ locale: string }>;

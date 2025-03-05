@@ -1,10 +1,10 @@
-import Title from '@/components/shared/Title';
+import Title from '../../../components/shared/Title';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import message from "../../../../public/assets/image/About/ams-wall.jpg"
+import message from "/public/assets/image/About/ams-wall.jpg"
 import React from 'react'
-import AnimatedTitle from '@/components/features/AnimatedTitle';
-import AnimatedLine from '@/components/features/AnimatedLine';
+import AnimatedTitle from '../../../components/features/AnimatedTitle';
+import AnimatedLine from '../../../components/features/AnimatedLine';
 
 
 export default function ThirdPra() {

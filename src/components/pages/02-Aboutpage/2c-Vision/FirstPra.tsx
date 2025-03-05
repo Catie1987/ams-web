@@ -1,7 +1,7 @@
 "use client"
-import AnimatedLine from '@/components/features/AnimatedLine';
-import AnimatedTitle from '@/components/features/AnimatedTitle';
-import Title from '@/components/shared/Title';
+import AnimatedLine from '../../../../components/features/AnimatedLine';
+import AnimatedTitle from '../../../../components/features/AnimatedTitle';
+import Title from '../../../../components/shared/Title';
 import { useTranslations } from 'next-intl';
 import React from 'react'
 import { Variants, motion } from 'framer-motion';

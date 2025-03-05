@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
-import { Skeleton } from '@/components/ui/skeleton'
-import { Separator } from '@/components/ui/separator';
-import { useIsMobile } from '@/lib/hooks/useIsMobile';
+import { Skeleton } from '../../../components/ui/skeleton'
+import { Separator } from '../../../components/ui/separator';
+import { useIsMobile } from '../../../lib/hooks/useIsMobile';
 
 interface BlogSkeletonProps { count: number; }
 

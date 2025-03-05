@@ -1,12 +1,12 @@
 import {getTranslations, setRequestLocale} from 'next-intl/server';
-import PageLayout from '@/components/shared/PageLayout';
-import Search from '@/components/features/search';
-import { Separator } from '@/components/ui/separator';
-import BlogPagination from '@/components/pages/05-Blogpage/BlogPagination';
-import { getTotalBlogPosts } from '@/lib/clients/contentful';
-import { SelectCategory } from '@/components/pages/05-Blogpage/ComboBoxCategories';
-import { Locale } from '@/i18n/routing';
-import BlogPostsGridSuspense from '@/components/pages/05-Blogpage/BlogPostGrid';
+import PageLayout from '../../../components/shared/PageLayout';
+import Search from '../../../components/features/search';
+import { Separator } from '../../../components/ui/separator';
+import BlogPagination from '../../../components/pages/05-Blogpage/BlogPagination';
+import { getTotalBlogPosts } from '../../../lib/clients/contentful';
+import { SelectCategory } from '../../../components/pages/05-Blogpage/ComboBoxCategories';
+import { Locale } from '../../../i18n/routing';
+import BlogPostsGridSuspense from '../../../components/pages/05-Blogpage/BlogPostGrid';
 
 type Props = {
   params: Promise<{ locale: string }>;

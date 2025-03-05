@@ -5,10 +5,10 @@ import { AnimatePresence, Variants, motion } from 'framer-motion';
 import { MenuContext } from './Header';
 import menuAnimationData from '../../../public/assets/Animation-1733906245399.json'
 import { Button } from '../ui/button';
-import {Link, usePathname} from '@/i18n/routing';
-import { cn } from '@/lib/utils';
+import {Link, usePathname} from '../../i18n/routing';
+import { cn } from '../../lib/utils';
 import {useTranslations} from 'next-intl';
-import { ScrollArea } from '@/components/ui/scroll-area';
+import { ScrollArea } from '../../components/ui/scroll-area';
 import { Separator } from '../ui/separator';
 import ToggleIcon from '../shared/ToggleIcon';
 import { BusinessList } from '../shared/BusinessList';

@@ -1,7 +1,7 @@
 import {useTranslations} from 'next-intl';
 import PageLayout from './PageLayout';
 import { Icons } from '../Icons';
-import { Link } from '@/i18n/routing';
+import { Link } from '../../i18n/routing';
 
 export default function NotFoundPage() {
   const t = useTranslations('NotFoundPage');

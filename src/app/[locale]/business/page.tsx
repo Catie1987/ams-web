@@ -1,9 +1,9 @@
 import {getTranslations, setRequestLocale} from 'next-intl/server';
-import PageLayout from '@/components/shared/PageLayout';
-import LandingPage from '@/components/pages/03-Businesspage/LandingPage';
-import Service from '@/components/pages/03-Businesspage/Service';
-import BusinessField from '@/components/pages/03-Businesspage/BusinessField';
-import { Locale } from '@/i18n/routing';
+import PageLayout from '../../../components/shared/PageLayout';
+import LandingPage from '../../../components/pages/03-Businesspage/LandingPage';
+import Service from '../../../components/pages/03-Businesspage/Service';
+import BusinessField from '../../../components/pages/03-Businesspage/BusinessField';
+import { Locale } from '../../../i18n/routing';
 
 type Props = {
   params: Promise<{ locale: Locale }>;

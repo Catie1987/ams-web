@@ -1,11 +1,11 @@
 import {getTranslations, setRequestLocale} from 'next-intl/server';
-import FirstPra from '@/components/pages/02-Aboutpage/FirstPra';
-import SecondPra from '@/components/pages/02-Aboutpage/SecondPra';
-import ThirdPra from '@/components/pages/02-Aboutpage/ThirdPra';
-import Title from '@/components/shared/Title';
-import AnimatedTitle from '@/components/features/AnimatedTitle';
-import AnimatedLine from '@/components/features/AnimatedLine';
-import { Locale } from '@/i18n/routing';
+import FirstPra from '../../../components/pages/02-Aboutpage/FirstPra';
+import SecondPra from '../../..//components/pages/02-Aboutpage/SecondPra';
+import ThirdPra from '../../..//components/pages/02-Aboutpage/ThirdPra';
+import Title from '../../..//components/shared/Title';
+import AnimatedTitle from '../../..//components/features/AnimatedTitle';
+import AnimatedLine from '../../..//components/features/AnimatedLine';
+import { Locale } from '../../..//i18n/routing';
 
 type Props = {
   params: Promise<{ locale: Locale }>;

@@ -1,8 +1,8 @@
-import PageLayout from '@/components/shared/PageLayout';
+import PageLayout from '../../../components/shared/PageLayout';
 import React, { ReactNode } from 'react';
-import Banner from '@/components/pages/06-Contactpage/Banner';
+import Banner from '../../../components/pages/06-Contactpage/Banner';
 import { setRequestLocale } from 'next-intl/server';
-import BreadCrumb from '@/components/layouts/BreadCrumb';
+import BreadCrumb from '../../../components/layouts/BreadCrumb';
 
 
 type Props = {

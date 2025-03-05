@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useFormContext, Controller } from 'react-hook-form';
-import {Checkbox} from '@/components/ui/checkbox'; // Adjust import path as needed
+import {Checkbox} from '../../../components/ui/checkbox'; // Adjust import path as needed
 
 interface CheckboxItemProps {
   name: string;

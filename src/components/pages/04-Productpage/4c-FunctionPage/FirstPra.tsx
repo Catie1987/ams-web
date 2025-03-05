@@ -1,7 +1,7 @@
 "use client";
-import { Icons } from '@/components/Icons';
-import Title from '@/components/shared/Title';
-import { FunctionDetail } from '@/lib/types';
+import { Icons } from '../../../../components/Icons';
+import Title from '../../../../components/shared/Title';
+import { FunctionDetail } from '../../../../lib/types';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';

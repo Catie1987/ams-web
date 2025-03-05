@@ -1,10 +1,10 @@
-import { getProductsbyType } from '@/lib/clients/contentful';
-import { ProductDetail } from '@/lib/types';
+import { getProductsbyType } from '../../../../lib/clients/contentful';
+import { ProductDetail } from '../../../../lib/types';
 import { getLocale, getTranslations } from 'next-intl/server';
 import React, { FC } from 'react';
 import ProductList from '../ProductList';
-import Title from '@/components/shared/Title';
-import ArrowRight from '@/components/features/Arrow-Right-cta';
+import Title from '../../../../components/shared/Title';
+import ArrowRight from '../../../../components/features/Arrow-Right-cta';
 
 interface ProductsGridProps { 
     typeName: string;

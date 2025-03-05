@@ -1,13 +1,13 @@
 "use client"
 import React, { useState } from 'react';
-import AnimatedLine from '@/components/features/AnimatedLine'
-import AnimatedTitle from '@/components/features/AnimatedTitle'
-import Title from '@/components/shared/Title'
+import AnimatedLine from '../../../../components/features/AnimatedLine'
+import AnimatedTitle from '../../../../components/features/AnimatedTitle'
+import Title from '../../../../components/shared/Title'
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import img from '../../../../../public/assets/business5/electronic.jpg'
-import PulseAnimate from '@/components/features/PulseAnimate';
-import ArrowDown from '@/components/features/Arrow-Down';
+import img from '/public/assets/business5/electronic.jpg'
+import PulseAnimate from '../../../../components/features/PulseAnimate';
+import ArrowDown from '../../../../components/features/Arrow-Down';
 import SubCategory from './Sub';
 
 export default function Business5() {

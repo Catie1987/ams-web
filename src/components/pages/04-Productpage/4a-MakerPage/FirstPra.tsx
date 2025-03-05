@@ -1,7 +1,7 @@
 "use client";
-import MakerImage from '@/components/features/MakerImage';
-import { Icons } from '@/components/Icons';
-import { MakerDetail } from '@/lib/types';
+import MakerImage from '../../../../components/features/MakerImage';
+import { Icons } from '../../../../components/Icons';
+import { MakerDetail } from '../../../../lib/types';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import React, { FC } from 'react';

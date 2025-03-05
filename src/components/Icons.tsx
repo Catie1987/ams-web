@@ -1,12 +1,12 @@
-import vn from '../../public/flag/vn.svg';
-import en from '../../public/flag/us.svg';
-import globe from '../../public/globe.svg';
-import errline from '../../public/ams-line-dark.svg';
-import err from '../../public/404.svg';
-import arrowRightWhite from '../../public/icons/arrow-right-white.svg';
-import arrowLeftBlack from '../../public/icons/arrow-left-black.svg';
-import arrowRightBlack from '../../public/icons/arrow-right-black.svg';
-import arrowRightBold from '../../public/icons/arrow-right-bold.svg';
+import vn from '/public/flag/vn.svg';
+import en from '/public/flag/us.svg';
+import globe from '/public/globe.svg';
+import errline from '/public/ams-line-dark.svg';
+import err from '/public/404.svg';
+import arrowRightWhite from '/public/icons/arrow-right-white.svg';
+import arrowLeftBlack from '/public/icons/arrow-left-black.svg';
+import arrowRightBlack from '/public/icons/arrow-right-black.svg';
+import arrowRightBold from '/public/icons/arrow-right-bold.svg';
 import Image from 'next/image';
 
 export const Icons = {

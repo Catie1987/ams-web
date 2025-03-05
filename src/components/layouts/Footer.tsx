@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import logo from '../../../public/assets/image/logo-white.png';
+import logo from '/public/assets/image/logo-white.png';
 import { Phone, Mail, Facebook, Youtube,Linkedin } from 'lucide-react';
-import { Link } from '@/i18n/routing';
+import { Link } from '../../i18n/routing';
 import { useTranslations } from 'next-intl';
 import Container from './Container';
 import GoToTop from '../features/GoToTop';

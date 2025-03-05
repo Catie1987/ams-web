@@ -1,17 +1,17 @@
 "use client";
-import { Link } from '@/i18n/routing';
-import Title from '@/components/shared/Title';
+import { Link } from '../../../../i18n/routing';
+import Title from '../../../../components/shared/Title';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import Image from 'next/image';
-import img1 from '../../../../../public/assets/business8/other1.jpg';
-import img2 from '../../../../../public/assets/business8/other2.webp';
+import img1 from '/public/assets/business8/other1.jpg';
+import img2 from '/public/assets/business8/other2.webp';
 import {
   Carousel,
   CarouselContent,
   CarouselDots,
   CarouselItem,
-} from "@/components/ui/carousel"
+} from "../../../../components/ui/carousel"
 
 export default function Case3() {
   const t = useTranslations('BusinessPage.construction');

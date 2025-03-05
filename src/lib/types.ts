@@ -78,6 +78,7 @@ export interface MakerDetail {
   makerName: string;
   logo?: ImageFieldsFragment;
   slug: string;
+  locale: string;
 };
 
 

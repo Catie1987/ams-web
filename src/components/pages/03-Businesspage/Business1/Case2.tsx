@@ -1,18 +1,18 @@
 "use client";
-import { Link } from '@/i18n/routing';
-import Title from '@/components/shared/Title';
+import { Link } from '../../../../i18n/routing';
+import Title from '../../../../components/shared/Title';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import Image from 'next/image';
-import firstimg from '../../../../../public/assets/business1/display.jpg';
-import secondimg from '../../../../../public/assets/business1/adasmodule.jpg';
-import thirdimg from '../../../../../public/assets/business1/battery-management-system.jpg';
+import firstimg from '/public/assets/business1/display.jpg';
+import secondimg from '/public/assets/business1/adasmodule.jpg';
+import thirdimg from '/public/assets/business1/battery-management-system.jpg';
 import {
   Carousel,
   CarouselContent,
   CarouselDots,
   CarouselItem,
-} from "@/components/ui/carousel"
+} from "../../../../components/ui/carousel"
 
 export default function Case2() {
   const t = useTranslations('BusinessPage.automotive');

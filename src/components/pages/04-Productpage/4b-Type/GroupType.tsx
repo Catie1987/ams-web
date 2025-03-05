@@ -1,7 +1,7 @@
 import React from 'react'
-import { getProductTypes } from '@/lib/clients/contentful'
+import { getProductTypes } from '../../../../lib/clients/contentful'
 import { getLocale } from 'next-intl/server';
-import { Separator } from '@/components/ui/separator';
+import { Separator } from '../../../../components/ui/separator';
 import TypeGrid from './TypeGrid';
 
 const localeMap: { [key: string]: string } = { 

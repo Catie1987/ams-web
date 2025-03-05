@@ -1,18 +1,18 @@
 "use client";
-import { Link } from '@/i18n/routing';
-import Title from '@/components/shared/Title';
+import { Link } from '../../../../i18n/routing';
+import Title from '../../../../components/shared/Title';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import Image from 'next/image';
-import img1 from '../../../../../public/assets/business7/solar1.webp';
-import img2 from '../../../../../public/assets/business7/solar2.webp';
+import img1 from '/public/assets/business7/solar1.webp';
+import img2 from '/public/assets/business7/solar2.webp';
 
 import {
   Carousel,
   CarouselContent,
   CarouselDots,
   CarouselItem,
-} from "@/components/ui/carousel"
+} from "../../../../components/ui/carousel"
 
 export default function Case4() {
   const t = useTranslations('BusinessPage.battery');

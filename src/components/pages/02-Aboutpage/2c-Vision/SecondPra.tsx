@@ -1,10 +1,8 @@
 import React from 'react';
-import vision from "../../../../../public/assets/image/About/vision_image02.jpg"
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import Title from '@/components/shared/Title';
-import AnimatedTitle from '@/components/features/AnimatedTitle';
-import AnimatedLine from '@/components/features/AnimatedLine';
+import Title from '../../../../components/shared/Title';
+import AnimatedTitle from '../../../../components/features/AnimatedTitle';
+import AnimatedLine from '../../../../components/features/AnimatedLine';
 
 export default function SecondPra() {
     const t = useTranslations('VisionPage');

@@ -1,5 +1,5 @@
 "use client"
-import { FunctionDetail} from '@/lib/types';
+import { FunctionDetail} from '../../../../lib/types';
 import React, { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';

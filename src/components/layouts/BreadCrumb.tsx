@@ -7,7 +7,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from "../../components/ui/breadcrumb";
 import { usePathname, useParams } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 

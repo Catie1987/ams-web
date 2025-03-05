@@ -1,19 +1,19 @@
 "use client";
-import Title from '@/components/shared/Title';
+import Title from '../../../components/shared/Title';
 import { animate, motion, useMotionValue } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import React, { useEffect, useState } from 'react';
-import img1 from '../../../../public/assets/home/cus1.png';
-import img2 from '../../../../public/assets/home/cus2.png';
-import img3 from '../../../../public/assets/home/cus3.png';
-import img4 from '../../../../public/assets/home/cus4.png';
-import img5 from '../../../../public/assets/home/cus5.png';
-import img6 from '../../../../public/assets/home/cus6.png';
-import img7 from '../../../../public/assets/home/cus7.jpg';
-import img8 from '../../../../public/assets/home/cus8.jpg';
-import img9 from '../../../../public/assets/home/cus9.png';
-import img10 from '../../../../public/assets/home/cus10.png';
-import img11 from '../../../../public/assets/home/cus11.png';
+import img1 from '/public/assets/home/cus1.png';
+import img2 from '/public/assets/home/cus2.png';
+import img3 from '/public/assets/home/cus3.png';
+import img4 from '/public/assets/home/cus4.png';
+import img5 from '/public/assets/home/cus5.png';
+import img6 from '/public/assets/home/cus6.png';
+import img7 from '/public/assets/home/cus7.jpg';
+import img8 from '/public/assets/home/cus8.jpg';
+import img9 from '/public/assets/home/cus9.png';
+import img10 from '/public/assets/home/cus10.png';
+import img11 from '/public/assets/home/cus11.png';
 import CustomerCard from './Customer-Card';
 import useMeasure from 'react-use-measure'
 

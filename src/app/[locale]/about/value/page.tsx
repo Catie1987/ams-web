@@ -1,6 +1,6 @@
 
-import FirstPra from '@/components/pages/02-Aboutpage/2d-Value/FirstPra';
-import { Locale } from '@/i18n/routing';
+import FirstPra from '../../../../components/pages/02-Aboutpage/2d-Value/FirstPra';
+import { Locale } from '../../../../i18n/routing';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type Props = {

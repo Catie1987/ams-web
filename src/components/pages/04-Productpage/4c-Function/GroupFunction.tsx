@@ -1,6 +1,6 @@
 import React from 'react';
 import { getLocale } from 'next-intl/server';
-import { Separator } from '@/components/ui/separator';
+import { Separator } from '../../../../components/ui/separator';
 import FunctionGrid from './FunctionGrid';
 
 const letters = [

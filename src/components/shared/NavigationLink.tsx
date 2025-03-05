@@ -2,7 +2,7 @@
 
 import clsx from 'clsx';
 import {ComponentProps, ReactNode} from 'react';
-import {Link, usePathname} from '@/i18n/routing';
+import {Link, usePathname} from '../../i18n/routing';
 
 
 interface NavigationLinkProps extends ComponentProps<typeof Link> { 

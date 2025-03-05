@@ -1,7 +1,7 @@
 import React from 'react';
 import { getLocale } from 'next-intl/server';
-import { getMakers } from '@/lib/clients/contentful';
-import { MakerDetail } from '@/lib/types';
+import { getMakers } from '../../../../lib/clients/contentful';
+import { MakerDetail } from '../../../../lib/types';
 import MarkerName from './MarkerName';
 
 

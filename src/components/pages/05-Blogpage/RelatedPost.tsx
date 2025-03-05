@@ -1,12 +1,12 @@
-import OptimizedImage from '@/components/features/OptimizedImage';
+import OptimizedImage from '../../../components/features/OptimizedImage';
 import Link from 'next/link';
-import { getRelatedposts } from '@/lib/clients/contentful';
-import { BlogPost } from '@/lib/types';
+import { getRelatedposts } from '../../../lib/clients/contentful';
+import { BlogPost } from '../../../lib/types';
 import { getLocale, getTranslations } from 'next-intl/server';
 import React, { FC } from 'react';
-import Title from '@/components/shared/Title';
-import { Icons } from '@/components/Icons';
-import { Separator } from '@/components/ui/separator';
+import Title from '../../../components/shared/Title';
+import { Icons } from '../../../components/Icons';
+import { Separator } from '../../../components/ui/separator';
 
 interface RelatedPostProps {
     category: string[];

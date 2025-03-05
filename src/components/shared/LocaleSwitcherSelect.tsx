@@ -2,7 +2,7 @@
 
 import {useParams} from 'next/navigation';
 import { ReactNode, useTransition} from 'react';
-import {Locale, usePathname, useRouter} from '@/i18n/routing';
+import {Locale, usePathname, useRouter} from '../../i18n/routing';
 import {
   Select,
   SelectContent,
@@ -10,7 +10,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "../../components/ui/select"
 import { useTranslations } from 'next-intl';
 
 type Props = {

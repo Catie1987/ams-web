@@ -1,17 +1,17 @@
 import {getTranslations, setRequestLocale} from 'next-intl/server';
-import PageLayout from '@/components/shared/PageLayout';
-import { getFunctions, getMakers, getProductTypes, getTotalProducts } from '@/lib/clients/contentful';
-import ProductsGrid from '@/components/pages/04-Productpage/ProductGrid';
-import Search from '@/components/features/search';
-import Title from '@/components/shared/Title';
-import { Separator } from '@/components/ui/separator';
-import ProductPagination from '@/components/pages/04-Productpage/ProductPagination';
-import SelectType from '@/components/pages/04-Productpage/SelectType';
+import PageLayout from '../../../components/shared/PageLayout';
+import { getFunctions, getMakers, getProductTypes, getTotalProducts } from '../../../lib/clients/contentful';
+import ProductsGrid from '../../../components/pages/04-Productpage/ProductGrid';
+import Search from '../../../components/features/search';
+import Title from '../../../components/shared/Title';
+import { Separator } from '../../../components/ui/separator';
+import ProductPagination from '../../../components/pages/04-Productpage/ProductPagination';
+import SelectType from '../../../components/pages/04-Productpage/SelectType';
 import { Suspense } from 'react';
-import LoadingFallback from '@/components/shared/LoadingFallback';
-import { Button } from '@/components/ui/button';
+import LoadingFallback from '../../../components/shared/LoadingFallback';
+import { Button } from '../../../components/ui/button';
 import { Mail } from 'lucide-react';
-import BreadCrumb from '@/components/layouts/BreadCrumb';
+
 
 type Props = {
   params: Promise<{ locale: string }>;

@@ -1,10 +1,10 @@
 "use client";
 
-import { formSchema } from "@/lib/schemas";
-import Title from '@/components/shared/Title';
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+import { formSchema } from "../../../lib/schemas";
+import Title from '../../../components/shared/Title';
+import { Input } from "../../../components/ui/input";
+import { Textarea } from "../../../components/ui/textarea";
+import { Button } from "../../../components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import {
@@ -14,15 +14,15 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "../../../components/ui/form";
 
 import { z } from "zod";
-import { send } from "@/lib/email";
+import { send } from "../../../lib/email";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
-import { Toaster } from "@/components/ui/sonner";
-import AnimatedLine from "@/components/features/AnimatedLine";
-import AnimatedTitle from "@/components/features/AnimatedTitle";
+import { Toaster } from "../../../components/ui/sonner";
+import AnimatedLine from "../../../components/features/AnimatedLine";
+import AnimatedTitle from "../../../components/features/AnimatedTitle";
 
 export default function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({

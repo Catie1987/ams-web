@@ -1,8 +1,8 @@
 "use client";
-import AnimatedLine from '@/components/features/AnimatedLine';
-import AnimatedTitle from '@/components/features/AnimatedTitle';
-import Title from '@/components/shared/Title';
-import { useIsMobile } from '@/lib/hooks/useIsMobile';
+import AnimatedLine from '../../../../components/features/AnimatedLine';
+import AnimatedTitle from '../../../../components/features/AnimatedTitle';
+import Title from '../../../../components/shared/Title';
+import { useIsMobile } from '../../../../lib/hooks/useIsMobile';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import React from 'react';

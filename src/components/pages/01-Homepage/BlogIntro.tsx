@@ -1,8 +1,8 @@
 "use client";
-import Title from '@/components/shared/Title';
+import Title from '../../../components/shared/Title';
 import { motion, Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import ArrowRight from '@/components/features/Arrow-Right-cta';
+import ArrowRight from '../../../components/features/Arrow-Right-cta';
 
 export default function BlogIntro() {
     const t = useTranslations('HomePage.FourthPra');

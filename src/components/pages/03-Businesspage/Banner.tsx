@@ -1,9 +1,9 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import banner from '../../../../public/assets/image/bannerbusiness.jpg'
-import Container from '@/components/layouts/Container';
-import Title from '@/components/shared/Title';
+import banner from '/public/assets/image/bannerbusiness.jpg'
+import Container from '../../../components/layouts/Container';
+import Title from '../../../components/shared/Title';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';

@@ -1,8 +1,8 @@
 
-import { Locale } from '@/i18n/routing';
+import { Locale } from '../../../../i18n/routing';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import FirstPra from '@/components/pages/02-Aboutpage/2b-Principle/FirstPra';
-import SecondPra from '@/components/pages/02-Aboutpage/2b-Principle/SecondPra';
+import FirstPra from '../../../../components/pages/02-Aboutpage/2b-Principle/FirstPra';
+import SecondPra from '../../../../components/pages/02-Aboutpage/2b-Principle/SecondPra';
 
 type Props = {
     params: Promise<{ locale: Locale }>;

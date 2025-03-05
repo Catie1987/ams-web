@@ -1,11 +1,11 @@
 "use client"
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import Title from '@/components/shared/Title';
+import Title from '../../../components/shared/Title';
 import { MapPinned, FileText, Mail, Phone, Clock8 } from 'lucide-react';
-import AnimatedLine from '@/components/features/AnimatedLine';
+import AnimatedLine from '../../../components/features/AnimatedLine';
 import { motion, Variants } from 'framer-motion';
-import AnimatedTitle from '@/components/features/AnimatedTitle';
+import AnimatedTitle from '../../../components/features/AnimatedTitle';
 
 const itemscontainer: Variants = {
     show: {

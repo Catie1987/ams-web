@@ -7,11 +7,11 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+} from "../../components/ui/navigation-menu";
 import React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 import Image from 'next/image';
-import logo from '../../../public/assets/image/logo.png'
+import logo from '/public/assets/image/logo.png'
 import { BusinessList } from './BusinessList';
 import { SearchForm } from './search-form';
 import { Factory, Waypoints, Settings } from 'lucide-react';

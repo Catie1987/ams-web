@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import Counter from '@/components/features/Counter';
+import Counter from '../../../components/features/Counter';
 
 export default function FirstPra() {
   const t = useTranslations('HomePage.FirstPra')

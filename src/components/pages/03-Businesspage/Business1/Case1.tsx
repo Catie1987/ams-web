@@ -1,19 +1,19 @@
 "use client";
-import { Link } from '@/i18n/routing';
-import Title from '@/components/shared/Title';
+import { Link } from '../../../../i18n/routing';
+import Title from '../../../../components/shared/Title';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import Image from 'next/image';
-import ecuimg from '../../../../../public/assets/business1/ECU-Integrated-Drivetrain-Contro-Unit.jpg';
-import fanimg from '../../../../../public/assets/business1/Coupler-Oil-Fan.webp';
-import pcbecuimg from '../../../../../public/assets/business1/pcb_ecu.webp';
-import radiatorimg from '../../../../../public/assets/business1/Car-radiator.webp';
+import ecuimg from '/public/assets/business1/ECU-Integrated-Drivetrain-Contro-Unit.jpg';
+import fanimg from '/public/assets/business1/Coupler-Oil-Fan.webp';
+import pcbecuimg from '/public/assets/business1/pcb_ecu.webp';
+import radiatorimg from '/public/assets/business1/Car-radiator.webp';
 import {
   Carousel,
   CarouselContent,
   CarouselDots,
   CarouselItem,
-} from "@/components/ui/carousel"
+} from "../../../../components/ui/carousel"
 
 export default function Case1() {
 const t = useTranslations('BusinessPage.automotive');

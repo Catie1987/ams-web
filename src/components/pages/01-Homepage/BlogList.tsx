@@ -1,9 +1,9 @@
 import React from 'react';
-import { getlandingBlogposts } from '@/lib/clients/contentful';
+import { getlandingBlogposts } from '../../../lib/clients/contentful';
 import { getLocale } from 'next-intl/server';
-import { formatDateDay } from '@/lib/helpers';
+import { formatDateDay } from '../../../lib/helpers';
 import Link from 'next/link';
-import ExternalRight from '@/components/features/External-Right';
+import ExternalRight from '../../../components/features/External-Right';
 
 const localeMap: { [key: string]: string } = { 
     en: 'en-US', 

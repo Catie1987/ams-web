@@ -1,36 +1,37 @@
-import FirstPra from '@/components/pages/04-Productpage/4b-TypePage/FirstPra';
-import SecondPra from '@/components/pages/04-Productpage/4b-TypePage/SecondPra';
-import { getProductType, getProductTypes } from '@/lib/clients/contentful';
+import FirstPra from '../../../../../components/pages/04-Productpage/4b-TypePage/FirstPra';
+import SecondPra from '../../../../../components/pages/04-Productpage/4b-TypePage/SecondPra';
+import { getProductType, getProductTypes } from '../../../../../lib/clients/contentful';
+import { setRequestLocale } from 'next-intl/server';
 import React from 'react';
 
-
-type Params = Promise<{ 
-  slug: string,
-  locale: string,
-}>;
 
 const localeMap: { [key: string]: string } = { 
     en: 'en-US', 
     vn: 'vi-VN', 
 };
 
-export async function generateStaticParams(props: {
-  params: Params;
-}) {
-    const locale = await props.params;
-    const contentfulLocale = localeMap[locale as unknown as string] || 'en-US';
-    const productTypes = await getProductTypes(contentfulLocale);
-    return productTypes.map((type) => ({
+export async function generateStaticParams() {
+  const locales = Object.keys(localeMap);
+  const allProductTypes = await Promise.all(
+    locales.map(async (locale) => {
+      const contentfulLocale = localeMap[locale];
+      const productTypes = await getProductTypes(contentfulLocale);
+      return productTypes.map((type) => ({
         slug: type.slug!,
-    }))
-  };
+        locale,
+      }));
+    })
+  );
+  return allProductTypes.flat();
+}
 
-  export async function generateMetadata(props: {
-    params: Params
+  export async function generateMetadata({params}: {
+    params: Promise<{ locale: string; slug: string }>
   }) {
-    const params = await props.params;
-    const contentfulLocale = localeMap[params.locale as unknown as string] || 'en-US';
-    const Type = await getProductType(params.slug, contentfulLocale);
+    const {locale, slug}= await params;
+    setRequestLocale(locale);
+    const contentfulLocale = locale === 'vn' ? 'vi-VN' : 'en-US';
+    const Type = await getProductType(slug, contentfulLocale);
     if(!Type) {
       
       return;
@@ -42,12 +43,13 @@ export async function generateStaticParams(props: {
     }
   }
 
-export default async function TypePage(props: {
-    params: Params;
+export default async function TypePage({params}: {
+  params: Promise<{ locale: string; slug: string }>
 }) {
-    const params = await props.params;
-    const contentfulLocale = localeMap[params.locale as unknown as string] || 'en-US';
-    const Type = await getProductType(params.slug, contentfulLocale);
+  const {locale, slug}= await params;
+    setRequestLocale(locale);
+    const contentfulLocale = locale === 'vn' ? 'vi-VN' : 'en-US';
+    const Type = await getProductType(slug, contentfulLocale);
     if(!Type) {
       
       return;

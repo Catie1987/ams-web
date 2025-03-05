@@ -2,7 +2,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, Variants } from 'framer-motion';
-import Title from '@/components/shared/Title';
+import Title from '../../../../components/shared/Title';
 
 export default function SecondPra() {
     const t = useTranslations('PrinciplePage');

@@ -1,9 +1,9 @@
 "use client";
-import Title from '@/components/shared/Title';
+import Title from '../../../../components/shared/Title';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import React from 'react';
-import ArrowRight from '@/components/features/Arrow-Right-cta';
+import ArrowRight from '../../../../components/features/Arrow-Right-cta';
 
 
 export default function FirstPra() {

@@ -1,6 +1,6 @@
 "use server";
 
-import { EmailTemplate } from "@/components/ui/email-template";
+import { EmailTemplate } from "../components/ui/email-template";
 import { Resend } from "resend";
 import { z } from "zod";
 import { formSchema } from "./schemas";

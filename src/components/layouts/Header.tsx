@@ -1,11 +1,11 @@
 "use client";
 import { createContext, useState } from 'react';
 import Container from './Container';
-import { useIsMobile } from '@/lib/hooks/useIsMobile';
+import { useIsMobile } from '../../lib/hooks/useIsMobile';
 import Navigation from '../shared/Navigation';
 import NavigationLink from '../shared/NavigationLink';
 import Image from 'next/image';
-import logo from '../../../public/assets/image/logo.png';
+import logo from '/public/assets/image/logo.png';
 import LocaleSwitcher from '../shared/LocaleSwitcher';
 import Menu from './Menu';
 

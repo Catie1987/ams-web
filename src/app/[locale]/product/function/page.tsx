@@ -1,8 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import FirstPra from '@/components/pages/04-Productpage/4c-Function/FirstPra';
-import GroupFunction from '@/components/pages/04-Productpage/4c-Function/GroupFunction';
+import FirstPra from '../../../../components/pages/04-Productpage/4c-Function/FirstPra';
+import GroupFunction from '../../../../components/pages/04-Productpage/4c-Function/GroupFunction';
 
 
 type Props = {
