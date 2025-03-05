@@ -8,7 +8,7 @@ import img1 from '/public/assets/business6/internal1.webp';
 import img2 from '/public/assets/business6/internal2.webp';
 import img3 from '/public/assets/business6/internal3.jpg';
 import img4 from '/public/assets/business6/internal4.png';
-import img5 from '/public/assets/business6/internal5.avif';
+import img5 from '/public/assets/business6/internal5.png';
 import {
   Carousel,
   CarouselContent,

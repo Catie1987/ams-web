@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 import Image from 'next/image';
 import img1 from '/public/assets/business6/keyboard1.jpg';
-import img2 from '/public/assets/business6/keyboard2.avif';
+import img2 from '/public/assets/business6/keyboard2.jpg';
 import img3 from '/public/assets/business6/keyboard3.png';
 import {
   Carousel,

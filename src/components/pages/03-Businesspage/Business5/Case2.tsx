@@ -6,7 +6,7 @@ import React from 'react';
 import Image from 'next/image';
 import img1 from '/public/assets/business5/kitchen1.webp';
 import img2 from '/public/assets/business5/kitchen2.png';
-import img3 from '/public/assets/business5/kitchen3.avif';
+import img3 from '/public/assets/business5/kitchen3.jpg';
 import img4 from '/public/assets/business5/kitchen4.webp';
 import img5 from '/public/assets/business5/kitchen5.jpg';
 import {
